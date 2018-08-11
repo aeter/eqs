@@ -122,7 +122,23 @@ $(document).ready(function () {
             }
         }
     });
-    $('.map').on('click', function() {
+    var keyboardSlider = document.getElementById('year_slider');
+    
+    noUiSlider.create(keyboardSlider, {
+        start: [-10, 10],
+        step: 1,
+        connect: true,
+        range: {
+            'min': -2150,
+            'max': 2018
+        },
+        pips: {
+            mode: 'values',
+            values: [-2150, -1500, -1000, -500, 0, 500, 1000, 1500, 2018],
+            density: 1000
+        }
+    });
+    year_slider.noUiSlider.on('end', function() {
         var years = year_slider.noUiSlider.get();
         var quakes = alasql('select * from quakes where YEAR >= __start_year__ and YEAR <= __end_year__'
             .replace('__start_year__', years[0]).replace('__end_year__', years[1]));
@@ -144,22 +160,6 @@ $(document).ready(function () {
         }]);
     });
 
-    var keyboardSlider = document.getElementById('year_slider');
-    
-    noUiSlider.create(keyboardSlider, {
-        start: [-10, 10],
-        step: 1,
-        connect: true,
-        range: {
-            'min': -2150,
-            'max': 2018
-        },
-        pips: {
-            mode: 'values',
-            values: [-2150, -1500, -1000, -500, 0, 500, 1000, 1500, 2018],
-            density: 1000
-        }
-    });
 });
     </script>
   </head>
