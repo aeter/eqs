@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Earthquakes</title>
+    <link rel="stylesheet" type="text/css" href="vendor/nouislider-11.1.0/nouislider.min.css">
     <style type="text/css">
         .container {
             max-width: 1200px;
@@ -74,8 +75,14 @@
         .mapael .zoomOut {
             top: 50px;
         }
+
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
+}
     </style>
-    <link rel="stylesheet" src="vendor/nouislider-11.1.0/nouislider.min.css">
     <script type="text/javascript" src="vendor/jquery-3.1.1/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="vendor/raphael-2.2.7/raphael.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="vendor/jquery-mapael-2.2.0/jquery.mapael.min.js" charset="utf-8"></script>
@@ -116,7 +123,9 @@ $(document).ready(function () {
         }
     });
     $('.map').on('click', function() {
-        quakes = alasql('select * from quakes where YEAR = 2018');
+        var years = year_slider.noUiSlider.get();
+        var quakes = alasql('select * from quakes where YEAR >= __start_year__ and YEAR <= __end_year__'
+            .replace('__start_year__', years[0]).replace('__end_year__', years[1]));
 
         var new_plots = {};
         for (i = 0; i < quakes.length; i++) {
@@ -130,9 +139,26 @@ $(document).ready(function () {
         $(".mapcontainer").trigger('update', [{
             mapOptions: {'areas': {}, 'plots': {}}, 
             newPlots: new_plots,
-            deletePlotKeys: ["paris", "lyon"],
+            deletePlotKeys: Object.keys(maparea.data('mapael').plots),
             animDuration: 0 
         }]);
+    });
+
+    var keyboardSlider = document.getElementById('year_slider');
+    
+    noUiSlider.create(keyboardSlider, {
+        start: [-10, 10],
+        step: 1,
+        connect: true,
+        range: {
+            'min': -2150,
+            'max': 2018
+        },
+        pips: {
+            mode: 'values',
+            values: [-2150, -1500, -1000, -500, 0, 500, 1000, 1500, 2018],
+            density: 1000
+        }
     });
 });
     </script>
@@ -144,7 +170,8 @@ $(document).ready(function () {
         <div class="map">
         </div>
       <div>
-      <div id="date_slider">
+      <hr>
+      <div id="year_slider">
       </div>
     </div>
   </body>
