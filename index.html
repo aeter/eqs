@@ -139,6 +139,9 @@ $(document).ready(function () {
             density: 1000
         }
     });
+    function quake_info(quake) {
+        return "Year: " + quake['YEAR'] + "\n" + "Location: " + quake['LOCATION_NAME']; 
+    }
     year_slider.noUiSlider.on('end', function() {
         var years = year_slider.noUiSlider.get();
         var quakes = alasql('select * from quakes where YEAR >= __start_year__ and YEAR <= __end_year__'
@@ -148,7 +151,7 @@ $(document).ready(function () {
         for (i = 0; i < quakes.length; i++) {
           quakes[i]['latitude'] = quakes[i]['LATITUDE'];
           quakes[i]['longitude'] = quakes[i]['LONGITUDE'];
-          quakes[i]['tooltip'] = {content: quakes[i]['LOCATION_NAME']};
+          quakes[i]['tooltip'] = {content: quake_info(quakes[i])};
           quakes[i]['size'] = 5;
           new_plots[quakes[i]['I_D']] = quakes[i];
         }
@@ -160,13 +163,21 @@ $(document).ready(function () {
             animDuration: 0 
         }]);
     });
-
 });
     </script>
   </head>
   <body>
+    <a href="https://github.com/aeter/eqs/">
+        <img style="position: absolute; top: 0; right: 0; border: 0;"
+          src="vendor/github/forkme_right_darkblue.png"
+          alt="Fork me on GitHub">
+    </a>
     <div class="container">
-      <h1>Earthquakes</h1>
+      <h1 title="Information on destructive earthquakes from 2150 B.C. to the
+          present that meet at least one of the following criteria: Moderate
+          damage (approximately $1 million or more), 10 or more deaths,
+          Magnitude 7.5 or greater, Modified Mercalli Intensity X or greater, or
+          the earthquake generated a tsunami.">Significant earthquakes</h1>
       <div class="mapcontainer mapael">
         <div class="map">
         </div>
@@ -175,5 +186,10 @@ $(document).ready(function () {
     <hr>
     Year <div id="year_slider">
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="http://dx.doi.org/10.7289/V5TD9V7K">Data source</a>
   </body>
 </html>
