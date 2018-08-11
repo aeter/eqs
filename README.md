@@ -1,5 +1,7 @@
 # eqs
 
+[DEMO](https://aeter.github.io/eqs/)  :arrow_upper_right:
+
 ---
 
 Database: 
