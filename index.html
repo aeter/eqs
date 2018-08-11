@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Earthquakes</title>
+    <style type="text/css">
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        body {
+            color: #5d5d5d;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .mapael .map {
+            position: relative;
+        }
+
+        .mapael .mapTooltip {
+            position: absolute;
+            background-color: #fff;
+            moz-opacity: 0.70;
+            opacity: 0.70;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 1000;
+            max-width: 200px;
+            display: none;
+            color: #343434;
+        }
+
+        .mapael .zoomButton {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            color: #000;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 3px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            font-weight: bold;
+            left: 10px;
+
+            -webkit-user-select: none;
+            -khtml-user-select : none;
+            -moz-user-select: none;
+            -o-user-select : none;
+            user-select: none;
+        }
+
+        /* Reset Zoom button first */
+        .mapael .zoomReset {
+            top: 10px;
+        }
+
+        /* Then Zoom In button */
+        .mapael .zoomIn {
+            top: 30px;
+        }
+
+        /* Then Zoom Out button */
+        .mapael .zoomOut {
+            top: 50px;
+        }
+    </style>
+    <link rel="stylesheet" src="vendor/nouislider-11.1.0/nouislider.min.css">
+    <script type="text/javascript" src="vendor/jquery-3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="vendor/raphael-2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="vendor/jquery-mapael-2.2.0/jquery.mapael.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="vendor/jquery-mapael-2.2.0/world_countries.js" charset="utf-8"></script>
+    <script type="text/javascript" src="vendor/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="vendor/nouislider-11.1.0/nouislider.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="vendor/alasql-0.4.9/alasql.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+$(document).ready(function () {
+    alasql('CREATE TABLE quakes; SELECT * INTO quakes from TSV("data/significant_quakes.tsv")');
+    alasql.fn.to_date = function(x) { return new Date(x); } // for comparing dates
+
+    var getElemID = function(elem) {
+        return $(elem.node).attr("data-id");
+    };
+
+    var maparea = $(".mapcontainer");
+    maparea.mapael({
+        map: {
+            name: "world_countries",
+            zoom: {
+                enabled: true,
+                maxLevel: 10
+            },
+            defaultArea: {
+                tooltip: {
+                    content: getElemID
+                },
+                eventHandlers: {
+                    click: function (e, id) {
+                        maparea.trigger('zoom', {
+                            area: id,
+                            areaMargin: 10
+                        });
+                    }
+                }
+            }
+        }
+    });
+    $('.map').on('click', function() {
+        quakes = alasql('select * from quakes where YEAR = 2018');
+
+        var new_plots = {};
+        for (i = 0; i < quakes.length; i++) {
+          quakes[i]['latitude'] = quakes[i]['LATITUDE'];
+          quakes[i]['longitude'] = quakes[i]['LONGITUDE'];
+          quakes[i]['tooltip'] = {content: quakes[i]['LOCATION']};
+          quakes[i]['size'] = 5;
+          new_plots[quakes[i]['I_D']] = quakes[i];
+        }
+
+        $(".mapcontainer").trigger('update', [{
+            mapOptions: {'areas': {}, 'plots': {}}, 
+            newPlots: new_plots,
+            deletePlotKeys: ["paris", "lyon"],
+            animDuration: 0 
+        }]);
+    });
+});
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Earthquakes</h1>
+      <div class="mapcontainer mapael">
+        <div class="map">
+        </div>
+      <div>
+      <div id="date_slider">
+      </div>
+    </div>
+  </body>
+</html>
