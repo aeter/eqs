@@ -112,6 +112,9 @@ $(document).ready(function () {
           quakes[i]['longitude'] = quakes[i]['LONGITUDE'];
           quakes[i]['tooltip'] = {content: quake_info(quakes[i])};
           quakes[i]['size'] = 5;
+          if (quakes[i]['DAMAGE_DESCRIPTION'] == "4") {
+              quakes[i]['attrs'] = { fill: 'red' };
+          }
           new_plots[quakes[i]['I_D']] = quakes[i];
         }
 
