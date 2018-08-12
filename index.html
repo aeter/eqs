@@ -15,7 +15,7 @@
     <script type="text/javascript">
 $(document).ready(function () {
     var DAMAGE_DESCRIPTIONS = {
-        "": "NONE",
+        "": "UNKNOWN",
         "1": "LIMITED (<$1m (1990 USD))", 
         "2": "MODERATE ($1-5m (1990 USD))",
         "3": "SEVERE ($5-524m (1990 USD))",
@@ -80,7 +80,7 @@ $(document).ready(function () {
         },
         pips: {
             mode: 'steps',
-            format: {to: update_damage_values},
+            format: {to: update_damage_values}
         }
     });
 
@@ -155,6 +155,10 @@ $(document).ready(function () {
     <br>
     <br>
     <br>
-    <a href="http://dx.doi.org/10.7289/V5TD9V7K">Data source</a>
+          <a href="http://dx.doi.org/10.7289/V5TD9V7K" title="
+                  National Geophysical Data Center / World Data Service
+                  (NGDC/WDS): NCEI/WDS Global Significant Earthquake Database.
+                  NOAA National Centers for Environmental Information.
+                  doi:10.7289/V5TD9V7K">Data Source</a>
   </body>
 </html>
