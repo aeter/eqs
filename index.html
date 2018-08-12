@@ -14,12 +14,15 @@
     <script type="text/javascript" src="vendor/alasql-0.4.9/alasql.min.js" charset="utf-8"></script>
     <script type="text/javascript">
 $(document).ready(function () {
+    var DAMAGE_DESCRIPTIONS = {
+        "": "NONE",
+        "1": "LIMITED (<$1m (1990 USD))", 
+        "2": "MODERATE ($1-5m (1990 USD))",
+        "3": "SEVERE ($5-524m (1990 USD))",
+        "4": "EXTREME (>525m (1990 USD))"
+    }
     alasql('CREATE TABLE quakes; SELECT * INTO quakes from TSV("data/significant_quakes.tsv")');
     alasql.fn.to_date = function(x) { return new Date(x); } // for comparing dates
-
-    var getElemID = function(elem) {
-        return $(elem.node).attr("data-id");
-    };
 
     var maparea = $(".mapcontainer");
     maparea.mapael({
@@ -31,7 +34,7 @@ $(document).ready(function () {
             },
             defaultArea: {
                 tooltip: {
-                    content: getElemID
+                    content: function(e) { return $(e.node).attr("data-id"); }
                 },
                 eventHandlers: {
                     click: function (e, id) {
@@ -44,9 +47,7 @@ $(document).ready(function () {
             }
         }
     });
-    var keyboardSlider = document.getElementById('year_slider');
-    
-    noUiSlider.create(keyboardSlider, {
+    noUiSlider.create($('#year_slider').get(0), {
         start: [-10, 10],
         step: 1,
         connect: true,
@@ -64,13 +65,46 @@ $(document).ready(function () {
             density: 1000
         }
     });
-    function quake_info(quake) {
-        return "Year: " + quake['YEAR'] + "\n" + "Location: " + quake['LOCATION_NAME']; 
+
+    function update_damage_values(value, type) {
+        value = value == 0 ? "" : value;
+        return DAMAGE_DESCRIPTIONS[value];
     }
-    year_slider.noUiSlider.on('end', function() {
+    noUiSlider.create($('#damage_slider').get(0), {
+        start: [1, 4],
+        step: 1,
+        connect: true,
+        range: {
+            min: 0,
+            max: 4,
+        },
+        pips: {
+            mode: 'steps',
+            format: {to: update_damage_values},
+        }
+    });
+
+    damage_slider.noUiSlider.on('end', recalculate_quakes);
+    year_slider.noUiSlider.on('end', recalculate_quakes);
+
+    function quake_info(quake) {
+        return "Year: " + quake['YEAR'] 
+                + "<br>" 
+                + "Location: " + quake['LOCATION_NAME']
+                + "<br>"
+                + "Damage desc.: " + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']];
+    }
+
+    function recalculate_quakes() {
         var years = year_slider.noUiSlider.get();
-        var quakes = alasql('select * from quakes where YEAR >= __start_year__ and YEAR <= __end_year__'
-            .replace('__start_year__', years[0]).replace('__end_year__', years[1]));
+        var damage_descriptions = damage_slider.noUiSlider.get(); // TODO -generate 
+        var query = 'select * from quakes where' 
+                    + ' YEAR >= __start_year__ and YEAR <= __end_year__ '
+                    + ' AND DAMAGE_DESCRIPTION IN (__damage_descriptions__) ';
+        var quakes = alasql(query
+                    .replace('__start_year__', years[0])
+                    .replace('__end_year__', years[1])
+                    .replace('__damage_descriptions__', "'', 1, 2, 3, 4"));
 
         var new_plots = {};
         for (i = 0; i < quakes.length; i++) {
@@ -87,7 +121,7 @@ $(document).ready(function () {
             deletePlotKeys: Object.keys(maparea.data('mapael').plots),
             animDuration: 0 
         }]);
-    });
+    };
 });
     </script>
   </head>
@@ -110,6 +144,12 @@ $(document).ready(function () {
     </div>
     <hr>
     Year <div id="year_slider">
+    </div>
+    <br>
+    <br>
+    <br>
+    Damage
+    <div id="damage_slider">
     </div>
     <br>
     <br>
