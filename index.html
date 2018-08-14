@@ -95,16 +95,23 @@ $(document).ready(function () {
                 + "Damage desc.: " + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']];
     }
 
+    function range(start, end) {
+        return [...Array(end - start + 1)].map((_, i) => start + i);
+    }
+
     function recalculate_quakes() {
         var years = year_slider.noUiSlider.get();
-        var damage_descriptions = damage_slider.noUiSlider.get(); // TODO -generate 
+        var damage_descriptions = damage_slider.noUiSlider.get();
+        damage_descriptions = range(
+                parseInt(damage_descriptions[0]),
+                parseInt(damage_descriptions[1])).join(',').replace("0", '\'\'');
         var query = 'select * from quakes where' 
                     + ' YEAR >= __start_year__ and YEAR <= __end_year__ '
                     + ' AND DAMAGE_DESCRIPTION IN (__damage_descriptions__) ';
         var quakes = alasql(query
                     .replace('__start_year__', years[0])
                     .replace('__end_year__', years[1])
-                    .replace('__damage_descriptions__', "'', 1, 2, 3, 4"));
+                    .replace('__damage_descriptions__', damage_descriptions));
 
         var new_plots = {};
         for (i = 0; i < quakes.length; i++) {
