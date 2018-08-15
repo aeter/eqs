@@ -3,10 +3,10 @@ var EQS = {};
 EQS.main = function() {
     var DAMAGE_DESCRIPTIONS = {
         "": "UNKNOWN",
-        "1": "LIMITED (<$1m (1990 USD))", 
-        "2": "MODERATE ($1-5m (1990 USD))",
-        "3": "SEVERE ($5-524m (1990 USD))",
-        "4": "EXTREME (>525m (1990 USD))"
+        "1": "LIMITED (<1m USD)",
+        "2": "MODERATE (1-5m USD)",
+        "3": "SEVERE (5-524m USD)",
+        "4": "EXTREME (>525m USD)"
     }
     alasql('CREATE TABLE quakes; SELECT * INTO quakes from TSV("data/significant_quakes.tsv")');
     alasql.fn.to_date = function(x) { return new Date(x); } // for comparing dates
@@ -74,19 +74,41 @@ EQS.main = function() {
     damage_slider.noUiSlider.on('end', recalculate_quakes);
     year_slider.noUiSlider.on('end', recalculate_quakes);
 
-    function quake_info(quake) {
-        return "Year: " + quake['YEAR'] 
+    class QuakeToolTip {
+        static damage_description(quake) {
+            if (quake['DAMAGE_DESCRIPTION'] == "4")
+                return '<span style="color:red;">Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']] + '</span>';
+            else
+                return 'Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']];
+        }
+
+        static html(quake) {
+            return "Year: " + quake['YEAR']
                 + "<br>" 
                 + "Location: " + quake['LOCATION_NAME']
                 + "<br>"
-                + "Damage desc.: " + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']];
+                + QuakeToolTip.damage_description(quake);
+        }
     }
 
     function range(start, end) {
         return [...Array(end - start + 1)].map((_, i) => start + i);
     }
 
-    var zoom_plot_size = 5;
+    // workaround for https://github.com/neveldo/jQuery-Mapael/issues/253
+    // shrinks the bubbles when zooming the map in, expands them on zoom-out.
+    var zoom_size = 5;
+    class BubblesZoom {
+        static zoom() {
+            var zoom_level = maparea.data("mapael").zoomData.zoomLevel;
+            var new_zoom_size = zoom_level <= 10 ? 5 : 1;
+            if (new_zoom_size != zoom_size) {
+                zoom_size = new_zoom_size;
+                recalculate_quakes();
+            }
+        }
+    }
+    maparea.on("zoom.mapael", BubblesZoom.zoom);
 
     function recalculate_quakes() {
         var years = year_slider.noUiSlider.get();
@@ -106,8 +128,8 @@ EQS.main = function() {
         for (i = 0; i < quakes.length; i++) {
           quakes[i]['latitude'] = quakes[i]['LATITUDE'];
           quakes[i]['longitude'] = quakes[i]['LONGITUDE'];
-          quakes[i]['tooltip'] = {content: quake_info(quakes[i])};
-          quakes[i]['size'] = zoom_plot_size;
+          quakes[i]['tooltip'] = {content: QuakeToolTip.html(quakes[i])};
+          quakes[i]['size'] = zoom_size;
           if (quakes[i]['DAMAGE_DESCRIPTION'] == "4") {
               quakes[i]['attrs'] = { fill: 'red' };
           }
@@ -121,16 +143,4 @@ EQS.main = function() {
             animDuration: 0 
         }]);
     };
-
-    // workaround for https://github.com/neveldo/jQuery-Mapael/issues/253
-    // shrinks the bubbles when zooming the map in, expands them on zoom-out.
-    maparea.on("zoom.mapael", function() {
-        var zoom_level = maparea.data("mapael").zoomData.zoomLevel;
-        new_zoom_plot_size = zoom_level <= 10 ? 5 : 1;
-
-        if (new_zoom_plot_size != zoom_plot_size) {
-            zoom_plot_size = new_zoom_plot_size;
-            recalculate_quakes();
-        }
-    });
 }
