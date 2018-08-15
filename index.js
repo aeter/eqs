@@ -35,7 +35,7 @@ EQS.main = function() {
         }
     });
     noUiSlider.create($('#year_slider').get(0), {
-        start: [-10, 10],
+        start: [-10, 9],
         step: 1,
         connect: true,
         tooltips: true,
@@ -86,6 +86,8 @@ EQS.main = function() {
         return [...Array(end - start + 1)].map((_, i) => start + i);
     }
 
+    var zoom_plot_size = 5;
+
     function recalculate_quakes() {
         var years = year_slider.noUiSlider.get();
         var damage_descriptions = damage_slider.noUiSlider.get();
@@ -105,7 +107,7 @@ EQS.main = function() {
           quakes[i]['latitude'] = quakes[i]['LATITUDE'];
           quakes[i]['longitude'] = quakes[i]['LONGITUDE'];
           quakes[i]['tooltip'] = {content: quake_info(quakes[i])};
-          quakes[i]['size'] = 5;
+          quakes[i]['size'] = zoom_plot_size;
           if (quakes[i]['DAMAGE_DESCRIPTION'] == "4") {
               quakes[i]['attrs'] = { fill: 'red' };
           }
@@ -119,4 +121,16 @@ EQS.main = function() {
             animDuration: 0 
         }]);
     };
+
+    // workaround for https://github.com/neveldo/jQuery-Mapael/issues/253
+    // shrinks the bubbles when zooming the map in, expands them on zoom-out.
+    maparea.on("zoom.mapael", function() {
+        var zoom_level = maparea.data("mapael").zoomData.zoomLevel;
+        new_zoom_plot_size = zoom_level <= 10 ? 5 : 1;
+
+        if (new_zoom_plot_size != zoom_plot_size) {
+            zoom_plot_size = new_zoom_plot_size;
+            recalculate_quakes();
+        }
+    });
 }
