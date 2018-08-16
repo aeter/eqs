@@ -8,8 +8,7 @@ EQS.main = function() {
         "3": "SEVERE (5-524m USD)",
         "4": "EXTREME (>525m USD)"
     }
-    alasql('CREATE TABLE quakes; SELECT * INTO quakes from TSV("data/significant_quakes.tsv")');
-    alasql.fn.to_date = function(x) { return new Date(x); } // for comparing dates
+    alasql('CREATE TABLE IF NOT EXISTS quakes; SELECT * INTO quakes from TSV("data/significant_quakes.tsv")');
 
     var maparea = $(".mapcontainer");
     maparea.mapael({
@@ -58,7 +57,7 @@ EQS.main = function() {
         return DAMAGE_DESCRIPTIONS[value];
     }
     noUiSlider.create($('#damage_slider').get(0), {
-        start: [1, 4],
+        start: [3, 4],
         step: 1,
         connect: true,
         range: {
@@ -71,8 +70,26 @@ EQS.main = function() {
         }
     });
 
+    noUiSlider.create($('#deaths_info_slider').get(0), {
+        start: [0, 830000],
+        step: 1,
+        connect: true,
+        tooltips: true,
+        range: {
+            min: 0,
+            '50%': [10000, 1],
+            max: 830000
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 1000, 10000, 100000, 830000],
+            density: 1000
+        }
+    });
+
     damage_slider.noUiSlider.on('end', recalculate_quakes);
     year_slider.noUiSlider.on('end', recalculate_quakes);
+    deaths_info_slider.noUiSlider.on('end', recalculate_quakes);
 
     class QuakeToolTip {
         static damage_description(quake) {
@@ -82,12 +99,32 @@ EQS.main = function() {
                 return 'Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']];
         }
 
+        static date(quake) {
+            if (quake['YEAR'] != "" && quake['MONTH'] != '')
+                return "Date: " + quake['YEAR'] + "-" + quake["MONTH"];
+            else
+                return "Date: " + quake['YEAR'];
+        }
+
+        static deaths(quake) {
+            var deaths = quake['DEATHS'] == '' ? 0 : parseInt(quake['DEATHS']);
+            if (quake['TOTAL_DEATHS'] != '' && parseInt(quake['TOTAL_DEATHS']) > deaths)
+                deaths = parseInt(quake['TOTAL_DEATHS']);
+            
+            if (deaths > 10000) 
+                return '<span style="color:red;">Deaths: ' + deaths + '</span>';
+            else
+                return 'Deaths: ' + deaths;
+        }
+
         static html(quake) {
-            return "Year: " + quake['YEAR']
+            return QuakeToolTip.date(quake)
                 + "<br>" 
                 + "Location: " + quake['LOCATION_NAME']
                 + "<br>"
-                + QuakeToolTip.damage_description(quake);
+                + QuakeToolTip.damage_description(quake)
+                + "<br>"
+                + QuakeToolTip.deaths(quake);
         }
     }
 
@@ -116,13 +153,23 @@ EQS.main = function() {
         damage_descriptions = range(
                 parseInt(damage_descriptions[0]),
                 parseInt(damage_descriptions[1])).join(',').replace("0", '\'\'');
+        var deaths = deaths_info_slider.noUiSlider.get();
+
         var query = 'select * from quakes where' 
                     + ' YEAR >= __start_year__ and YEAR <= __end_year__ '
-                    + ' AND DAMAGE_DESCRIPTION IN (__damage_descriptions__) ';
+                    + ' AND DAMAGE_DESCRIPTION IN (__damage_descriptions__) '
+                    + ' AND ((TOTAL_DEATHS >= __deaths_min__ AND TOTAL_DEATHS <= __deaths_max__) ';
+        if (deaths[0] == "0") 
+            query += "OR (DEATHS = '' OR TOTAL_DEATHS = '')";
+        query +=  '   OR (DEATHS >= __deaths_min__  AND DEATHS <= __deaths_max__)) ';
+
         var quakes = alasql(query
                     .replace('__start_year__', years[0])
                     .replace('__end_year__', years[1])
-                    .replace('__damage_descriptions__', damage_descriptions));
+                    .replace('__damage_descriptions__', damage_descriptions)
+                    .replace('__deaths_min__', deaths[0])
+                    .replace('__deaths_max__', deaths[1]));
+                    
 
         var new_plots = {};
         for (i = 0; i < quakes.length; i++) {
@@ -130,7 +177,9 @@ EQS.main = function() {
           quakes[i]['longitude'] = quakes[i]['LONGITUDE'];
           quakes[i]['tooltip'] = {content: QuakeToolTip.html(quakes[i])};
           quakes[i]['size'] = zoom_size;
-          if (quakes[i]['DAMAGE_DESCRIPTION'] == "4") {
+          if (quakes[i]['DAMAGE_DESCRIPTION'] == "4" 
+                  || parseInt(quakes[i]['TOTAL_DEATHS']) > 10000
+                  || parseInt(quakes[i]['DEATHS']) > 1000) {
               quakes[i]['attrs'] = { fill: 'red' };
           }
           new_plots[quakes[i]['I_D']] = quakes[i];
