@@ -100,8 +100,8 @@ EQS.main = function() {
         }
 
         static date(quake) {
-            if (quake['YEAR'] != "" && quake['MONTH'] != '')
-                return "Date: " + quake['YEAR'] + "-" + quake["MONTH"];
+            if (quake['YEAR'] != "" && quake['MONTH'] != '' && quake["DAY"] != '')
+                return "Date: " + quake['YEAR'] + "-" + quake["MONTH"] + "-" + quake["DAY"];
             else
                 return "Date: " + quake['YEAR'];
         }
