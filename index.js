@@ -77,12 +77,13 @@ EQS.main = function() {
         tooltips: true,
         range: {
             min: 0,
-            '50%': [10000, 1],
+            '30%': [3000, 1], 
+            '70%': [10000, 1], 
             max: 830000
         },
         pips: {
             mode: 'values',
-            values: [0, 1000, 10000, 100000, 830000],
+            values: [0, 3000, 10000, 830000],
             density: 1000
         }
     });
