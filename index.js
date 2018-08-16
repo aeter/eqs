@@ -111,10 +111,12 @@ EQS.main = function() {
             if (quake['TOTAL_DEATHS'] != '' && parseInt(quake['TOTAL_DEATHS']) > deaths)
                 deaths = parseInt(quake['TOTAL_DEATHS']);
             
-            if (deaths > 10000) 
+            if (deaths > 10000)  {
                 return '<span style="color:red;">Deaths: ' + deaths + '</span>';
-            else
+            } else {
+                deaths = deaths == 0 ? "-" : deaths; 
                 return 'Deaths: ' + deaths;
+            }
         }
 
         static html(quake) {
