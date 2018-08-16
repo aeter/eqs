@@ -2,7 +2,7 @@ body {
     color: #5d5d5d;
     background-color: black;
     font-family: sans-serif;
-    line-height: 1.4em;
+    line-height: 1.2;
 }
 
 h1 {
@@ -78,3 +78,13 @@ h1 {
 .noUi-active .noUi-tooltip {
     display: block;
 }
+
+.noUi-horizontal {
+    height: 9px;
+}
+
+.noUi-handle {
+    height: 20px !important;
+    width: 20px !important;
+}
+
