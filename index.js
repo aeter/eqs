@@ -57,7 +57,7 @@ EQS.main = function() {
         return DAMAGE_DESCRIPTIONS[value];
     }
     noUiSlider.create($('#damage_slider').get(0), {
-        start: [3, 4],
+        start: [0, 4],
         step: 1,
         connect: true,
         range: {
@@ -71,7 +71,7 @@ EQS.main = function() {
     });
 
     noUiSlider.create($('#deaths_info_slider').get(0), {
-        start: [0, 830000],
+        start: [1000, 830000],
         step: 1,
         connect: true,
         tooltips: true,
