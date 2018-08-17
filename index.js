@@ -71,7 +71,7 @@ EQS.main = function() {
     });
 
     noUiSlider.create($('#deaths_info_slider').get(0), {
-        start: [1000, 830000],
+        start: [0, 830000],
         step: 1,
         connect: true,
         tooltips: true,
