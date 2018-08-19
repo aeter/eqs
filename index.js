@@ -8,10 +8,22 @@ EQS.main = function() {
         "3": "SEVERE (5-524m USD)",
         "4": "EXTREME (>525m USD)"
     }
-    alasql.promise(
-            ["CREATE TABLE IF NOT EXISTS quakes",
-             "SELECT * INTO quakes from TSV('data/significant_quakes.tsv')",
-            ]).then(function(data) { alasql("UPDATE quakes SET DAMAGE_DESCRIPTION = 0 WHERE DAMAGE_DESCRIPTION = ''") });
+
+    class DB {
+        static init() {
+            alasql.promise(
+                ["CREATE TABLE IF NOT EXISTS quakes",
+                 "SELECT * INTO quakes from TSV('data/significant_quakes.tsv')",
+                ]).then(function(data) { 
+                    // for cleaner js code (sliders use 0, not NULL), we update the DB -
+                    // we insert '0's where there's NULL for some DB columns.
+                    alasql("UPDATE quakes SET DAMAGE_DESCRIPTION = 0 WHERE DAMAGE_DESCRIPTION = ''") 
+                    alasql("UPDATE quakes SET DEATHS = 0 WHERE DEATHS = ''") 
+                    alasql("UPDATE quakes SET TOTAL_DEATHS = 0 WHERE TOTAL_DEATHS = ''") 
+                });
+        }
+    }
+    DB.init();
 
     var maparea = $(".mapcontainer");
     maparea.mapael({
@@ -108,9 +120,10 @@ EQS.main = function() {
         }
 
         static deaths(quake) {
-            var deaths = quake['DEATHS'] == '' ? 0 : parseInt(quake['DEATHS']);
-            if (quake['TOTAL_DEATHS'] != '' && parseInt(quake['TOTAL_DEATHS']) > deaths)
-                deaths = parseInt(quake['TOTAL_DEATHS']);
+            if (parseInt(quake['TOTAL_DEATHS']) > parseInt(quake['DEATHS']))
+                var deaths = parseInt(quake['TOTAL_DEATHS']);
+            else
+                var deaths = parseInt(quake['DEATHS']);
             
             if (deaths > 10000)  {
                 return '<span style="color:red;">Deaths: ' + deaths + '</span>';
@@ -154,10 +167,8 @@ EQS.main = function() {
         var query = 'select * from quakes where' 
                     + ' YEAR >= __start_year__ and YEAR <= __end_year__ '
                     + ' AND DAMAGE_DESCRIPTION >= __damage_min__ AND DAMAGE_DESCRIPTION <= __damage_max__ '
-                    + ' AND ((TOTAL_DEATHS >= __deaths_min__ AND TOTAL_DEATHS <= __deaths_max__) ';
-        if (deaths[0] == "0") 
-            query += "OR (DEATHS = '' OR TOTAL_DEATHS = '')";
-        query +=  '   OR (DEATHS >= __deaths_min__  AND DEATHS <= __deaths_max__)) ';
+                    + ' AND ((TOTAL_DEATHS >= __deaths_min__ AND TOTAL_DEATHS <= __deaths_max__) '
+                    + '   OR (DEATHS >= __deaths_min__  AND DEATHS <= __deaths_max__)) ';
 
         var quakes = alasql(query
                     .replace('__start_year__', years[0])
@@ -166,7 +177,6 @@ EQS.main = function() {
                     .replace('__damage_max__', damage_descriptions[1])
                     .replace('__deaths_min__', deaths[0])
                     .replace('__deaths_max__', deaths[1]));
-                    
 
         var new_plots = {};
         for (i = 0; i < quakes.length; i++) {
