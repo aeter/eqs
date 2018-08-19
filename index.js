@@ -2,13 +2,16 @@ var EQS = {};
 
 EQS.main = function() {
     var DAMAGE_DESCRIPTIONS = {
-        "": "UNKNOWN",
+        "0": "UNKNOWN",
         "1": "LIMITED (<1m USD)",
         "2": "MODERATE (1-5m USD)",
         "3": "SEVERE (5-524m USD)",
         "4": "EXTREME (>525m USD)"
     }
-    alasql('CREATE TABLE IF NOT EXISTS quakes; SELECT * INTO quakes from TSV("data/significant_quakes.tsv")');
+    alasql.promise(
+            ["CREATE TABLE IF NOT EXISTS quakes",
+             "SELECT * INTO quakes from TSV('data/significant_quakes.tsv')",
+            ]).then(function(data) { alasql("UPDATE quakes SET DAMAGE_DESCRIPTION = 0 WHERE DAMAGE_DESCRIPTION = ''") });
 
     var maparea = $(".mapcontainer");
     maparea.mapael({
@@ -52,10 +55,6 @@ EQS.main = function() {
         }
     });
 
-    function update_damage_values(value, type) {
-        value = value == 0 ? "" : value;
-        return DAMAGE_DESCRIPTIONS[value];
-    }
     noUiSlider.create($('#damage_slider').get(0), {
         start: [0, 4],
         step: 1,
@@ -66,7 +65,7 @@ EQS.main = function() {
         },
         pips: {
             mode: 'steps',
-            format: {to: update_damage_values}
+            format: {to: function(value, type) { return DAMAGE_DESCRIPTIONS[value]; } }
         }
     });
 
@@ -77,13 +76,14 @@ EQS.main = function() {
         tooltips: true,
         range: {
             min: 0,
+            '10%': [10, 1],
             '30%': [3000, 1], 
             '70%': [10000, 1], 
             max: 830000
         },
         pips: {
             mode: 'values',
-            values: [0, 3000, 10000, 830000],
+            values: [0, 10, 3000, 10000, 830000],
             density: 1000
         }
     });
@@ -131,10 +131,6 @@ EQS.main = function() {
         }
     }
 
-    function range(start, end) {
-        return [...Array(end - start + 1)].map((_, i) => start + i);
-    }
-
     // workaround for https://github.com/neveldo/jQuery-Mapael/issues/253
     // shrinks the bubbles when zooming the map in, expands them on zoom-out.
     var zoom_size = 5;
@@ -153,14 +149,11 @@ EQS.main = function() {
     function recalculate_quakes() {
         var years = year_slider.noUiSlider.get();
         var damage_descriptions = damage_slider.noUiSlider.get();
-        damage_descriptions = range(
-                parseInt(damage_descriptions[0]),
-                parseInt(damage_descriptions[1])).join(',').replace("0", '\'\'');
         var deaths = deaths_info_slider.noUiSlider.get();
 
         var query = 'select * from quakes where' 
                     + ' YEAR >= __start_year__ and YEAR <= __end_year__ '
-                    + ' AND DAMAGE_DESCRIPTION IN (__damage_descriptions__) '
+                    + ' AND DAMAGE_DESCRIPTION >= __damage_min__ AND DAMAGE_DESCRIPTION <= __damage_max__ '
                     + ' AND ((TOTAL_DEATHS >= __deaths_min__ AND TOTAL_DEATHS <= __deaths_max__) ';
         if (deaths[0] == "0") 
             query += "OR (DEATHS = '' OR TOTAL_DEATHS = '')";
@@ -169,7 +162,8 @@ EQS.main = function() {
         var quakes = alasql(query
                     .replace('__start_year__', years[0])
                     .replace('__end_year__', years[1])
-                    .replace('__damage_descriptions__', damage_descriptions)
+                    .replace('__damage_min__', damage_descriptions[0])
+                    .replace('__damage_max__', damage_descriptions[1])
                     .replace('__deaths_min__', deaths[0])
                     .replace('__deaths_max__', deaths[1]));
                     
