@@ -41,9 +41,11 @@ EQS.main = function() {
                             var res = alasql('select * from quakes where I_D = ' + elemOptions.I_D)[0];
                             var html = "<ul>";
                             Object.keys(res).forEach(function(key) {
-                                html += "<li>" + key + ": " + res[key] + "</li>";
+                                if (res[key] != '') {
+                                    html += "<li>" + key + ": " + res[key] + "</li>";
+                                }
                             });
-                            html += "</ul>";
+                            html += "</ul>"
                             $('#quake_info').html(html);
                         }
                     }
