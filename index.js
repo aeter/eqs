@@ -33,12 +33,28 @@ EQS.main = function() {
                 enabled: true,
                 maxLevel: 50
             },
+            defaultPlot: {
+                eventHandlers: {
+                    click: function (e, id, mapElem, textElem, elemOptions) {
+                        var clicked_on_plot = typeof elemOptions.I_D != 'undefined';
+                        if (clicked_on_plot) {
+                            var res = alasql('select * from quakes where I_D = ' + elemOptions.I_D)[0];
+                            var html = "<ul>";
+                            Object.keys(res).forEach(function(key) {
+                                html += "<li>" + key + ": " + res[key] + "</li>";
+                            });
+                            html += "</ul>";
+                            $('#quake_info').html(html);
+                        }
+                    }
+                }
+            },
             defaultArea: {
                 tooltip: {
                     content: function(e) { return $(e.node).attr("data-id"); }
                 },
                 eventHandlers: {
-                    click: function (e, id) {
+                    click: function (e, id, mapElem, textElem, elemOptions) {
                         maparea.trigger('zoom', {
                             area: id,
                             areaMargin: 10
