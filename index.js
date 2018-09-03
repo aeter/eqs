@@ -123,6 +123,13 @@ EQS.main = function() {
     deaths_info_slider.noUiSlider.on('end', recalculate_quakes);
 
     class QuakeToolTip {
+        static magnitude(quake) {
+            if (quake['EQ_PRIMARY'] != '') 
+                return '<br>Magnitude: ' + quake['EQ_PRIMARY'];
+            else
+                return '';
+        }
+
         static damage_description(quake) {
             if (quake['DAMAGE_DESCRIPTION'] == "4")
                 return '<span style="color:red;">Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']] + '</span>';
@@ -155,6 +162,7 @@ EQS.main = function() {
             return QuakeToolTip.date(quake)
                 + "<br>" 
                 + "Location: " + quake['LOCATION_NAME']
+                + QuakeToolTip.magnitude(quake)
                 + "<br>"
                 + QuakeToolTip.damage_description(quake)
                 + "<br>"
