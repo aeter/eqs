@@ -145,16 +145,13 @@ EQS.main = function() {
         }
 
         static deaths(quake) {
-            if (parseInt(quake['TOTAL_DEATHS']) > parseInt(quake['DEATHS']))
-                var deaths = parseInt(quake['TOTAL_DEATHS']);
-            else
-                var deaths = parseInt(quake['DEATHS']);
+            var deaths = quake['TOTAL_DEATHS'] == '' ? parseInt(quake['DEATHS']) : parseInt(quake['TOTAL_DEATHS']);
             
             if (deaths > 10000)  {
                 return '<span style="color:red;">Deaths: ' + deaths + '</span>';
             } else {
                 deaths = deaths == 0 ? "-" : deaths; 
-                return 'Deaths: ' + deaths;
+                return 'Total deaths: ' + deaths;
             }
         }
 
