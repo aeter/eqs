@@ -33,24 +33,6 @@ EQS.main = function() {
                 enabled: true,
                 maxLevel: 50
             },
-            defaultPlot: {
-                eventHandlers: {
-                    click: function (e, id, mapElem, textElem, elemOptions) {
-                        var clicked_on_plot = typeof elemOptions.I_D != 'undefined';
-                        if (clicked_on_plot) {
-                            var res = alasql('select * from quakes where I_D = ' + elemOptions.I_D)[0];
-                            var html = "<ul>";
-                            Object.keys(res).forEach(function(key) {
-                                if (res[key] != '') {
-                                    html += "<li>" + key + ": " + res[key] + "</li>";
-                                }
-                            });
-                            html += "</ul>"
-                            $('#quake_info').html(html);
-                        }
-                    }
-                }
-            },
             defaultArea: {
                 tooltip: {
                     content: function(e) { return $(e.node).attr("data-id"); }
@@ -145,7 +127,7 @@ EQS.main = function() {
         }
 
         static deaths(quake) {
-            var deaths = quake['TOTAL_DEATHS'] == '' ? parseInt(quake['DEATHS']) : parseInt(quake['TOTAL_DEATHS']);
+            var deaths = quake['TOTAL_DEATHS'] == '0' ? parseInt(quake['DEATHS']) : parseInt(quake['TOTAL_DEATHS']);
             
             if (deaths > 10000)  {
                 return '<span style="color:red;">Total deaths: ' + deaths + '</span>';
@@ -167,6 +149,28 @@ EQS.main = function() {
             return quake['FOCAL_DEPTH'] == '' ? '' : 'Focal depth: ' + quake['FOCAL_DEPTH'] + ' km.<br>';
         }
 
+        static injuries(quake) {
+            if (quake['TOTAL_INJURIES'] != '')
+                var injuries = parseInt(quake['TOTAL_INJURIES']);
+            else if (quake['INJURIES'] != '')
+                var injuries = parseInt(quake['INJURIES']);
+            else
+                var injuries = '';
+
+            return injuries == '' ? '' : 'Total injuries: ' + injuries + '<br>';
+        }
+
+        static houses_destroyed(quake) {
+            if (quake['TOTAL_HOUSES_DESTROYED'] != '')
+                var houses_destroyed = parseInt(quake['TOTAL_HOUSES_DESTROYED']);
+            else if (quake['HOUSES_DESTROYED'] != '')
+                var houses_destroyed = parseInt(quake['HOUSES_DESTROYED']);
+            else
+                var houses_destroyed = '';
+
+            return houses_destroyed == '' ? '' : 'Total houses destroyed: ' + houses_destroyed + '<br>';
+        }
+
         static html(quake) {
             return QuakeToolTip.date(quake)
                 + "<br>" 
@@ -178,6 +182,8 @@ EQS.main = function() {
                 + QuakeToolTip.mmi_intensity(quake)
                 + QuakeToolTip.focal_depth(quake)
                 + QuakeToolTip.tsunami(quake)
+                + QuakeToolTip.houses_destroyed(quake)
+                + QuakeToolTip.injuries(quake)
                 + QuakeToolTip.deaths(quake);
         }
     }
