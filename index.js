@@ -107,23 +107,23 @@ EQS.main = function() {
     class QuakeToolTip {
         static magnitude(quake) {
             if (quake['EQ_PRIMARY'] != '') 
-                return '<br>Magnitude: ' + quake['EQ_PRIMARY'];
+                return 'Magnitude: ' + quake['EQ_PRIMARY'] + '<br>';
             else
                 return '';
         }
 
         static damage_description(quake) {
             if (quake['DAMAGE_DESCRIPTION'] == "4")
-                return '<span style="color:red;">Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']] + '</span>';
+                return '<span style="color:red;">Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']] + '</span><br>';
             else
-                return 'Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']];
+                return 'Damage: ' + DAMAGE_DESCRIPTIONS[quake['DAMAGE_DESCRIPTION']] + '<br>';
         }
 
         static date(quake) {
             if (quake['YEAR'] != "" && quake['MONTH'] != '' && quake["DAY"] != '')
-                return "Date: " + quake['YEAR'] + "-" + quake["MONTH"] + "-" + quake["DAY"];
+                return "Date: " + quake['YEAR'] + "-" + quake["MONTH"] + "-" + quake["DAY"] + '<br>';
             else
-                return "Date: " + quake['YEAR'];
+                return "Date: " + quake['YEAR'] + '<br>';
         }
 
         static deaths(quake) {
@@ -173,12 +173,9 @@ EQS.main = function() {
 
         static html(quake) {
             return QuakeToolTip.date(quake)
-                + "<br>" 
-                + "Location: " + quake['LOCATION_NAME']
+                + "Location: " + quake['LOCATION_NAME'] + '<br>'
                 + QuakeToolTip.magnitude(quake)
-                + "<br>"
                 + QuakeToolTip.damage_description(quake)
-                + "<br>"
                 + QuakeToolTip.mmi_intensity(quake)
                 + QuakeToolTip.focal_depth(quake)
                 + QuakeToolTip.tsunami(quake)
