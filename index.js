@@ -148,11 +148,23 @@ EQS.main = function() {
             var deaths = quake['TOTAL_DEATHS'] == '' ? parseInt(quake['DEATHS']) : parseInt(quake['TOTAL_DEATHS']);
             
             if (deaths > 10000)  {
-                return '<span style="color:red;">Deaths: ' + deaths + '</span>';
+                return '<span style="color:red;">Total deaths: ' + deaths + '</span>';
             } else {
                 deaths = deaths == 0 ? "-" : deaths; 
                 return 'Total deaths: ' + deaths;
             }
+        }
+
+        static mmi_intensity(quake) {
+            return quake['INTENSITY'] == '' ? '' : 'Modified Mercalii Intensity: ' + quake['INTENSITY'] + "<br>";
+        }
+
+        static tsunami(quake) {
+            return quake['FLAG_TSUNAMI'] == '' ? '' : 'Tsunami: yes<br>';
+        }
+
+        static focal_depth(quake) {
+            return quake['FOCAL_DEPTH'] == '' ? '' : 'Focal depth: ' + quake['FOCAL_DEPTH'] + ' km.<br>';
         }
 
         static html(quake) {
@@ -163,6 +175,9 @@ EQS.main = function() {
                 + "<br>"
                 + QuakeToolTip.damage_description(quake)
                 + "<br>"
+                + QuakeToolTip.mmi_intensity(quake)
+                + QuakeToolTip.focal_depth(quake)
+                + QuakeToolTip.tsunami(quake)
                 + QuakeToolTip.deaths(quake);
         }
     }
@@ -209,7 +224,7 @@ EQS.main = function() {
           quakes[i]['size'] = zoom_size;
           if (quakes[i]['DAMAGE_DESCRIPTION'] == "4" 
                   || parseInt(quakes[i]['TOTAL_DEATHS']) > 10000
-                  || parseInt(quakes[i]['DEATHS']) > 1000) {
+                  || parseInt(quakes[i]['DEATHS']) > 10000) {
               quakes[i]['attrs'] = { fill: 'red' };
           }
           new_plots[quakes[i]['I_D']] = quakes[i];
