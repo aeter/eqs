@@ -43,6 +43,10 @@ EQS.init_db = function() {
             alasql("UPDATE quakes SET DAMAGE_DESCRIPTION = 0 WHERE DAMAGE_DESCRIPTION = ''") 
             alasql("UPDATE quakes SET DEATHS = 0 WHERE DEATHS = ''") 
             alasql("UPDATE quakes SET TOTAL_DEATHS = 0 WHERE TOTAL_DEATHS = ''") 
+
+            // now, after the database loads for the first time, show some quakes
+            // on the screen (per the sliders filtering).
+            EQS.recalculate_quakes();
         });
 };
 
@@ -74,8 +78,7 @@ EQS.init_world_map = function() {
 
 EQS.create_year_slider = function() {
     noUiSlider.create($('#year_slider').get(0), {
-        //start: [-10, 9],
-        start: [0, 100],
+        start: [0, 500],
         step: 1,
         connect: true,
         tooltips: true,
