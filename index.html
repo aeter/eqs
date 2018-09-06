@@ -38,6 +38,12 @@ Use <a href="http://firefox.com">Firefox</a> instead.
 
 <![if !IE]>
     <div class="tab _nightblue">
+        <button id="map_settings" class="tablinks _disabled">
+            <span style="color: white;">
+                Destructive Earthquakes 
+                <div id="settings_verbose"></div> 
+            </span>
+        </button>
         <button class="tablinks _white"
             onclick="$('#tab_info').is(':visible') ? $('#tab_info>.-close').trigger('click') : opentab('tab_info')">
             info
@@ -89,7 +95,6 @@ Use <a href="http://firefox.com">Firefox</a> instead.
     <div class="mapcontainer mapael">
       <div class="map"></div>
     </div>
-    <div id="settings_verbose"></div>
 <![endif]>
   </body>
 </html>

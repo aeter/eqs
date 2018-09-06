@@ -78,7 +78,7 @@ EQS.init_world_map = function() {
 
 EQS.create_year_slider = function() {
     noUiSlider.create($('#year_slider').get(0), {
-        start: [0, 500],
+        start: [1900, 2018],
         step: 1,
         connect: true,
         tooltips: true,
@@ -100,7 +100,7 @@ EQS.create_year_slider = function() {
 
 EQS.create_damage_slider = function() {
     noUiSlider.create($('#damage_slider').get(0), {
-        start: [0, 4],
+        start: [3, 4],
         step: 1,
         connect: true,
         range: {
@@ -261,7 +261,7 @@ EQS.recalculate_quakes = function() {
     }]);
 
     $('#settings_verbose').html(
-        "Year Settings: __start_year__-__end_year__"
+        "YEAR: __start_year__-__end_year__"
             .replace('__start_year__', parseInt(years[0]))
             .replace('__end_year__', parseInt(years[1])));
 }
