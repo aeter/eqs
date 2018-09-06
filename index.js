@@ -261,7 +261,7 @@ EQS.recalculate_quakes = function() {
     }]);
 
     $('#settings_verbose').html(
-        "YEAR: __start_year__-__end_year__"
+        "destructive earthquakes <br><small>year: __start_year__-__end_year__</small>"
             .replace('__start_year__', parseInt(years[0]))
             .replace('__end_year__', parseInt(years[1])));
 }
