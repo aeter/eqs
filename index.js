@@ -259,5 +259,10 @@ EQS.recalculate_quakes = function() {
         deletePlotKeys: Object.keys($(".mapcontainer").data('mapael').plots),
         animDuration: 0 
     }]);
+
+    $('#settings_verbose').html(
+        "Year Settings: __start_year__-__end_year__"
+            .replace('__start_year__', parseInt(years[0]))
+            .replace('__end_year__', parseInt(years[1])));
 }
 

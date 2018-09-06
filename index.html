@@ -20,14 +20,13 @@
             EQS.main();
 
             // because the js of beauter.min.js has bugs.
+            // TODO - copy a "fixed.beauter.min.js" into the project js dir
             // TODO - consider removing it at all and opening the tabs
             // as per https://github.com/outboxcraft/beauter/blob/master/src/beauter.js
             $('.-close').on('click', function(e) {
                 e.preventDefault();
                 $(this).parent().hide();
             });
-
-            //$('#map_settings').click();
         });
     </script>
   </head>
@@ -39,11 +38,11 @@ Use <a href="http://firefox.com">Firefox</a> instead.
 
 <![if !IE]>
     <div class="tab _nightblue">
-        <button class="tablinks _indigo"
+        <button class="tablinks _black"
             onclick="$('#tab_info').is(':visible') ? $('#tab_info>.-close').trigger('click') : opentab('tab_info')">
-            Significant Earthquakes (2150 BC to 07.2018)
+            info
         </button>
-        <button id="map_settings" class="tablinks _indigo" 
+        <button id="map_settings" class="tablinks _black" 
             onclick="$('#tab_controls').is(':visible') ? $('#tab_controls>.-close').trigger('click') : opentab('tab_controls')">
             &#9881; settings
         </button>
@@ -63,7 +62,7 @@ Use <a href="http://firefox.com">Firefox</a> instead.
         </p>
         Data source: <a href="http://dx.doi.org/10.7289/V5TD9V7K">National Geophysical Data Center / World Data Service (NGDC/WDS): NCEI/WDS Global Significant Earthquake Database. NOAA National Centers for Environmental Information. doi:10.7289/V5TD9V7K</a>
     </div>
-    <div id="tab_controls" class="tabcontent _round _indigo">
+    <div id="tab_controls" class="tabcontent _round _black">
         <div class="-close _floatRight _f-danger">x</div>
         <div class="row">
             <div class="col m1"></div>
@@ -90,6 +89,7 @@ Use <a href="http://firefox.com">Firefox</a> instead.
     <div class="mapcontainer mapael">
       <div class="map"></div>
     </div>
+    <div id="settings_verbose"></div>
 <![endif]>
   </body>
 </html>
