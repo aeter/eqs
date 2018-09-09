@@ -13,20 +13,25 @@
     <script type="text/javascript" src="vendor/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="vendor/nouislider-11.1.0/nouislider.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="vendor/alasql-0.4.9/alasql.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="vendor/beauter/beauter.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="index.js" charset="utf-8"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             EQS.main();
 
-            // because the js of beauter.min.js has bugs.
-            // TODO - copy a "fixed.beauter.min.js" into the project js dir
-            // TODO - consider removing it at all and opening the tabs
-            // as per https://github.com/outboxcraft/beauter/blob/master/src/beauter.js
-            $('.-close').on('click', function(e) {
-                e.preventDefault();
-                $(this).parent().hide();
-            });
+            // we don't include vendor/beauter/beauter.min.js (it had some
+            // issues) and instead use tabs_beauter() for toggling tabs:
+            function tabs_beauter() {
+              $('.-close').on('click', function(e) {
+                  e.preventDefault();
+                  $(this).parent().hide();
+              });
+  
+              $('.tablinks').on('click', function(e) {
+                  e.preventDefault();
+                  $( "#" + $(this).attr('data-id') ).toggle();
+              });
+            }
+            tabs_beauter();
         });
     </script>
   </head>
@@ -41,12 +46,10 @@ Use <a href="http://firefox.com">Firefox</a> instead.
         <button id="title_button" class="tablinks _disabled" style="color: white; padding-bottom: 0px;">
             Destructive Earthquakes 
         </button>
-        <button class="tablinks _white"
-            onclick="$('#tab_info').is(':visible') ? $('#tab_info>.-close').trigger('click') : opentab('tab_info')">
+        <button class="tablinks _white" data-id="tab_info">
             info
         </button>
-        <button id="map_settings" class="tablinks _black" 
-            onclick="$('#tab_controls').is(':visible') ? $('#tab_controls>.-close').trigger('click') : opentab('tab_controls')">
+        <button id="map_settings" class="tablinks _black" data-id="tab_controls">
             &#9881; settings
         </button>
 

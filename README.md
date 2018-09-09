@@ -1,5 +1,3 @@
-[Work in progress] [WIP] :construction_worker:  :construction: :warning: :no_entry_sign: :heavy_multiplication_x:
-
 [DEMO](https://aeter.github.io/eqs/)  :arrow_upper_right:
 
 ---
