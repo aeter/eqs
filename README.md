@@ -1,4 +1,4 @@
-[DEMO](https://aeter.github.io/eqs/)  :arrow_upper_right:
+[DEMO :arrow_upper_right:](https://aeter.github.io/eqs/)
 
 ---
 
