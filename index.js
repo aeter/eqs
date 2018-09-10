@@ -175,7 +175,7 @@ EQS.make_html_tooltip = function(quake) {
     }
 
     function tsunami(quake) {
-        return quake['FLAG_TSUNAMI'] == '' ? '' : 'Tsunami: yes<br>';
+        return quake['FLAG_TSUNAMI'] == '' ? '' : 'Caused tsunami: yes<br>';
     }
 
     function focal_depth(quake) {

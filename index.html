@@ -21,15 +21,15 @@
             // we don't include vendor/beauter/beauter.min.js (it had some
             // issues) and instead use tabs_beauter() for toggling tabs:
             function tabs_beauter() {
-              $('.-close').on('click', function(e) {
-                  e.preventDefault();
-                  $(this).parent().hide();
-              });
+                $('.-close').on('click', function(e) {
+                    e.preventDefault();
+                    $(this).parent().hide();
+                });
   
-              $('.tablinks').on('click', function(e) {
-                  e.preventDefault();
-                  $( "#" + $(this).attr('data-id') ).toggle();
-              });
+                $('.tablinks').on('click', function(e) {
+                    e.preventDefault();
+                    $( "#" + $(this).attr('data-id') ).toggle();
+                });
             }
             tabs_beauter();
         });
@@ -43,54 +43,54 @@ Use <a href="http://firefox.com">Firefox</a> instead.
 
 <![if !IE]>
     <div class="tab _nightblue">
-        <button id="title_button" class="tablinks _disabled" style="color: white; padding-bottom: 0px;">
-            Destructive Earthquakes 
-        </button>
-        <button class="tablinks _white" data-id="tab_info">
-            info
-        </button>
-        <button id="map_settings" class="tablinks _black" data-id="tab_controls">
-            &#9881; settings
-        </button>
+      <button id="title_button" class="tablinks _disabled" style="color: white; padding-bottom: 0px;">
+          Destructive Earthquakes 
+      </button>
+      <button class="tablinks _white" data-id="tab_info">
+          info
+      </button>
+      <button id="map_settings" class="tablinks _black" data-id="tab_controls">
+          &#9881; settings
+      </button>
 
-        <a class='_floatRight _small' href="https://github.com/aeter/eqs/">
-            <img src="vendor/github/GitHub-Mark-Light-32px.png"  alt="Fork me on GitHub">
-        </a>
+      <a class='_floatRight _small' href="https://github.com/aeter/eqs/">
+        <img src="vendor/github/GitHub-Mark-Light-32px.png"  alt="Fork me on GitHub">
+      </a>
     </div>
 
     <div id="tab_info" class="tabcontent _cream">
-        <div class="-close _floatRight _f-danger">x</div>
-        <p> Destructive earthquakes from 2150 B.C. to the
-          present that meet at least one of the following criteria: Moderate
-          damage (approximately $1 million or more), 10 or more deaths,
-          Magnitude 7.5 or greater, Modified Mercalli Intensity X or greater, or
-          the earthquake generated a tsunami.
-        </p>
-        Data source: <a href="http://dx.doi.org/10.7289/V5TD9V7K">National Geophysical Data Center / World Data Service (NGDC/WDS): NCEI/WDS Global Significant Earthquake Database. NOAA National Centers for Environmental Information. doi:10.7289/V5TD9V7K</a>
+      <div class="-close _floatRight _f-danger">x</div>
+      <p> Destructive earthquakes from 2150 B.C. to the
+        present that meet at least one of the following criteria: Moderate
+        damage (approximately $1 million or more), 10 or more deaths,
+        Magnitude 7.5 or greater, Modified Mercalli Intensity X or greater, or
+        the earthquake generated a tsunami.
+      </p>
+      Data source: <a href="http://dx.doi.org/10.7289/V5TD9V7K">National Geophysical Data Center / World Data Service (NGDC/WDS): NCEI/WDS Global Significant Earthquake Database. NOAA National Centers for Environmental Information. doi:10.7289/V5TD9V7K</a>
     </div>
     <div id="tab_controls" class="tabcontent _round _black">
-        <div class="-close _floatRight _f-danger">x</div>
-        <div class="row">
-            <div class="col m1"></div>
-            <div class="col m10">
-            Year <div id="year_slider"></div>
-            </div>
+      <div class="-close _floatRight _f-danger">x</div>
+      <div class="row">
+        <div class="col m1"></div>
+        <div class="col m10">
+        Year <div id="year_slider"></div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col m1"></div>
-            <div class="col m10">
-            Damage <small>(in 1990 USD)</small><div id="damage_slider"></div>
-            </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col m1"></div>
+        <div class="col m10">
+        Damage <small>(in 1990 USD)</small><div id="damage_slider"></div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col m1"></div>
-            <div class="col m10">
-            Deaths <div id="deaths_info_slider"></div>
-            </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col m1"></div>
+        <div class="col m10">
+        Deaths <div id="deaths_info_slider"></div>
         </div>
-        <br>
+      </div>
+      <br>
     </div>
     <div class="mapcontainer mapael">
       <div class="map"></div>
