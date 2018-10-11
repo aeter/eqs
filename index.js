@@ -95,7 +95,7 @@ EQS.create_year_slider = function() {
             density: 1000
         }
     });
-    year_slider.noUiSlider.on('end', EQS.recalculate_quakes);
+    year_slider.noUiSlider.on('change', EQS.recalculate_quakes);
 }
 
 EQS.create_damage_slider = function() {
@@ -112,7 +112,7 @@ EQS.create_damage_slider = function() {
             format: {to: function(value, type) { return EQS.DAMAGE_DESCRIPTIONS[value]; } }
         }
     });
-    damage_slider.noUiSlider.on('end', EQS.recalculate_quakes);
+    damage_slider.noUiSlider.on('change', EQS.recalculate_quakes);
 }
 
 EQS.create_deaths_info_slider = function() {
@@ -134,7 +134,7 @@ EQS.create_deaths_info_slider = function() {
             density: 1000
         }
     });
-    deaths_info_slider.noUiSlider.on('end', EQS.recalculate_quakes);
+    deaths_info_slider.noUiSlider.on('change', EQS.recalculate_quakes);
 }
 
 EQS.make_html_tooltip = function(quake) {
