@@ -44,8 +44,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 34		-33														9	ISRAEL		ISRAEL:  PALESTINE	  31.200	   34.200	140	   30000	4											   30000	4										
 35		-31	9	2			    		 7.0						 7.0		ISRAEL		ISRAEL:  QUMRAN,ARIHA (JERICHO)	  32.000	   35.500	140								3																
 8197		-27															EGYPT		EGYPT:  THEBES	  25.700	   32.700	15								3												3				
-7796	Tsu	-26														9	CYPRUS		CYPRUS	  35.000	   33.000	130																								
 36		-26							 5.5		 5.5					7	CHINA		CHINA:  SICHUAN:  YIBIN	  28.800	  104.600	30	      13	1						2					      13	1						2				
+7796	Tsu	-26														9	CYPRUS		CYPRUS	  35.000	   33.000	130																								
 37		-15					    										CYPRUS		CYPRUS:  SALAMIS	  35.200	   34.000	130								4																
 38		10					    	18	 7.1						 7.1	10	TURKMENISTAN		TURKMENISTAN:  NISA	  38.000	   58.300	40								3																
 39		11					    									10	TURKEY		TURKEY	  37.800	   27.400	140																								
@@ -58,8 +58,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 10265		37	4	9													TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.100	   36.100	140		3						4						3						4				
 7896		46	10	23					 6.5		 6.5					8	CHINA		CHINA:  HENAN PROVINCE:  NANYANG	  33.000	  112.500	30		2						2		2				2						2		2		
 46		50															AFGHANISTAN		AFGHANISTAN:  AIKHANUM	  37.000	   68.500	40								2												2				
-49		52					    										GREECE		GREECE:  PHILIPPI,DRAMA,KAVALA	  41.000	   24.300	130								3																
 48		52					    									9	TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.100	   36.100	140								3																
+49		52					    										GREECE		GREECE:  PHILIPPI,DRAMA,KAVALA	  41.000	   24.300	130								3																
 50		55					    									10	GREECE		GREECE:  CRETE	  35.000	   25.000	130																								
 51		57					    									10	ALBANIA		ALBANIA:  DURRES	  41.200	   19.300	130																								
 52		60														9	TURKEY		TURKEY:  LAODICEA, HIERAPOLIS, COLOSSAE, [PAMUKKALE]	  37.900	   29.200	140								3												3				
@@ -82,8 +82,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 67		155					    	100								10	GREECE		GREECE:  DODECANESE ISLANDS	  36.500	   28.500	130																								
 68		170					    										GREECE		GREECE-TURKEY:  VITINIA,HELLESPONT	  39.000	   24.500	130								3																
 5884	Tsu	173	6	28													CHINA		CHINA:  YELLOW SEA	  37.500	  120.000	30																								
-69		177														7	TURKEY		TURKEY: IZMIR, AEGEAN ISLANDS	  38.600	   26.650	140		3						2						3						2				
 9757	Tsu	177														9	ITALY		ITALY:  SICILY	  38.000	   15.000	130								3												3				
+69		177														7	TURKEY		TURKEY: IZMIR, AEGEAN ISLANDS	  38.600	   26.650	140		3						2						3						2				
 70		180	9						 7.5		 7.5					10	CHINA		CHINA:  GANSU PROVINCE	  39.400	   99.500	30																								
 71		243					    		 5.3						 5.3		ITALY		ITALY:  VERONA,BENACO	  45.300	   11.000	130								4																
 72		251	7	9			    									10	GREECE		GREECE:  CRETE	  35.500	   25.500	130																								
@@ -100,11 +100,11 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 78		334					    									10	ALBANIA		ALBANIA:  DURRES	  41.200	   19.300	130																								
 79		340					    									9	TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.100	   36.100	140								3																
 80		341					    									7	TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.200	   36.100	140																								
-81		342															TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.200	   36.100	140	   40000	4						4					   40000	4						4				
 82		342														10	ALBANIA		ALBANIA:  DURRES	  41.300	   19.500	130								2												2				
+81		342															TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.200	   36.100	140	   40000	4						4					   40000	4						4				
 85		344	4	11												10	ITALY		ITALY:  CAMPANIA	  40.500	   14.500	130																								
-83		344															CHINA		CHINA:  HENAN PROVINCE	  35.400	  114.300	30	     101	3											     101	3										
 84	Tsu	344														9	TURKEY		TURKEY:  DARDANELLES	  40.300	   26.500	140								3												3				
+83		344															CHINA		CHINA:  HENAN PROVINCE	  35.400	  114.300	30	     101	3											     101	3										
 9989	Tsu	346							 6.8		 6.8					9	ALBANIA		ALBANIA:  DURRES (DYRRACHIUM)	  41.400	   19.400	130								2		3										2		3		
 86	Tsu	348														9	LEBANON		LEBANON:  BAYRUT (BEROUTH)	  33.900	   35.500	140								3																
 87		350	10				    									10	TURKEY		TURKEY	  41.000	   30.000	140																								
@@ -145,8 +145,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 125		512	5	21					 7.5		 7.5					10	CHINA		CHINA:  SHAANXI PROVINCE:  YINGXIAN	  39.400	  113.300	30	    5130	4			      2720	4		4					    5130	4			2720	4		4				
 126		518														12	MACEDONIA		BALKANS NW:  MACEDONIA:  SKOPJE, STAMER	  42.000	   21.400	130								4																
 128		521					    										GREECE		GREECE:  DURRES,KORINTHOS	  39.600	   21.200	130								3																
-130		522					    									10	ALBANIA		ALBANIA:  DURRES	  41.200	   19.300	130																								
 129		522					    									10	SYRIA		SYRIA	  36.200	   36.100	140								3																
+130		522					    									10	ALBANIA		ALBANIA:  DURRES	  41.200	   19.300	130																								
 131		525	5	29					 7.0		 7.0					9	TURKEY		TURKEY:  ANTAKYA (ANTIOCH), SAMANDAG	  36.250	   36.100	140	  250000	4						4					  250000	4						4				
 132		527					    									10	GREECE		GREECE-ALBANIA	  40.100	   20.800	130																								
 134		528	11	29					 7.1		 7.1					10	TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.250	   36.100	140	    4870	4						4					    4870	4						4				
@@ -199,8 +199,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 183		763							 7.6		 7.6						IRAN		IRAN:  KHURASAN	  33.300	   59.300	140																								
 7341	Tsu	766	7	20					 6.5						 6.5		JAPAN		JAPAN:  N. KAGOSHIMA BAY	  31.600	  130.700	30														3										
 185		777														8	CHINA		CHINA:  HEBEI PROVINCE:  SHULU, NINGJIN	  37.800	  115.200	30	     200	3						2		3			     200	3						2		3		
-187		778							 5.6						 5.6		ITALY		ITALY:  TREVISO	  45.400	   12.200	130	      48	1						2																
 7901		778															CHINA		CHINA:  HUNAN PROVINCE: HOANG KIN CHAN	  28.100	  111.400	30		3												3										
+187		778							 5.6						 5.6		ITALY		ITALY:  TREVISO	  45.400	   12.200	130	      48	1						2																
 188		780					    		 6.3						 6.3	8	SOUTH KOREA		SOUTH KOREA:  KYONGJU	  35.500	  129.100	30	     100	2						2																
 190		788	3	8					 6.5		 6.5					8	CHINA		CHINA:  SHAANXI PROVINCE:  ANKANG, FANGXIAN	  32.500	  109.400	30								2		3										2		3		
 192		793	4	30			    										ITALY		ITALY:  VERONA	  45.500	   11.000	130		3						3																
@@ -322,8 +322,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 365		1072														8	YEMEN		YEMEN:  SANA, ZABID; SAUDI ARABIA:  MECCA	  14.200	   43.300	60	      50	1						2		2		2	      50	1						2		2		
 366		1076					    									8	SYRIA		SYRIA:  (MANY COUNTRIES)	  35.000	   38.000	140		3						3																
 367		1082	12	6			    									10	TURKEY		TURKEY	  40.500	   28.500	140																								
-369		1085	4	29			    										TURKEY		TURKEY:  ERZURUM	  39.900	   41.100	140		3																						
 368		1085	4	29			    										IRAN		IRAN:  ARAJAN,KHUZESTAN	  31.000	   49.000	140		3						3																
+369		1085	4	29			    										TURKEY		TURKEY:  ERZURUM	  39.900	   41.100	140		3																						
 371		1086	4	18			    									8	IRAQ		IRAQ:  MESOPOTAMIA,JAZIRAH,BADHARAYA; SYRIA	  34.000	   44.000	140								2																
 370		1086					    										ITALY		ITALY:  SIRACUSA (SYRACUSE)	  37.000	   15.300	130	    1000	3						3																
 372		1088	4	22			    	10	 5.3						 5.3		GEORGIA		GEORGIA:  TMOGVI	  41.400	   43.200	40		3						3																
@@ -339,11 +339,11 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 381		1109														11	TURKEY		TURKEY:  ANTAKYA (ANTIOCH)	  36.200	   36.100	140								3		3		3								3		3		
 382		1111					    									9	TURKEY		TURKEY:  VAN	  38.500	   43.400	140								3																
 385		1114	3	12													TURKEY		TURKEY:  SANAOSATA,GHISN-MANSUR,KNESUN,MARAS	  37.500	   38.500	140																								
-383		1114															TURKEY		TURKEY:  ANTAKYA (ANTIOCH); SYRIA:  HALAB (ALEPPO)	  36.100	   36.100	140								2																
 9985		1114														10	ITALY		ITALY:  VITERBO	  42.420	   12.100	130								1												1				
+383		1114															TURKEY		TURKEY:  ANTAKYA (ANTIOCH); SYRIA:  HALAB (ALEPPO)	  36.100	   36.100	140								2																
 387		1115					    										IRAN		IRAN:  HENGAM ISLAND,KISH ISLAND	  26.400	   55.500	140								3																
-389		1115														10	TURKEY		TURKEY:  HARRAN,KUFA,SAMSAT,EL-SUN	  36.800	   39.000	140								3																
 388		1115															TURKEY		TURKEY:  ANTIOCH; SYRIA: ALEPPO; ISRAEL: PALESTINE	  36.100	   36.100	140								3																
+389		1115														10	TURKEY		TURKEY:  HARRAN,KUFA,SAMSAT,EL-SUN	  36.800	   39.000	140								3																
 390		1117	1	3	21	30	    									11	ITALY		ITALY:  N	  45.500	   11.000	130																								
 391		1117	3	1			    									10	ITALY		ITALY:  VENEZIA (VENICE) TO EMILIA	  44.800	   11.300	130		3						3																
 7261		1118															UK		UNITED KINGDOM:  IRELAND:  SLIABH-ELPA			120		3						4						3						4				
@@ -357,8 +357,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 402		1139														11	AZERBAIJAN		AZERBAIJAN:  GYZNDZHA	  40.300	   46.300	40	  230000	4						4		4			  230000	4						4		4		
 405		1143	4						 6.0		 6.0					8	CHINA		CHINA:  NINGXIA	  38.500	  106.300	30	   10000	4						3		3			   10000	4						3		3		
 406		1149	5	11			    										IRAQ		IRAQ:  BAGHDAD	  33.200	   44.400	140		3																						
-407		1151					    		 6.2						 6.2	9	SYRIA		SYRIA:  BUSRA	  32.600	   36.700	140								3																
 408		1151					    										PORTUGAL		PORTUGAL:  LISBON	  38.700	   -9.100	130	    1000	3						1																
+407		1151					    		 6.2						 6.2	9	SYRIA		SYRIA:  BUSRA	  32.600	   36.700	140								3																
 409		1153					    									10	GREECE		GREECE-ALBANIA	  39.800	   20.100	130																								
 412		1155	1	18													ITALY		ITALY:  BORGOGNE	  45.800	    8.100	130		3																						
 411		1155															SYRIA		SYRIA:  DIMASHQ; TURKEY:ANTIOCH; LEBANON:TARABULUS	  34.500	   36.500	140	    2000	4																						
@@ -376,8 +376,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 425		1176					    										IRAN		IRAN:  REY-QAZVIN	  36.300	   50.000	140								3																
 426		1179					    										TURKEY		TURKEY:  ANTIOCH; SYRIA:DAMASCUS; LEBANON:TRIPOLIS	  36.100	   36.100	140								3																
 427		1180					    									10	ITALY		ITALY:  ARIANO	  41.100	   15.100	130																								
-428		1182					    		 6.7						 6.7	10	SYRIA		SYRIA:  BUSRA; ISRAEL:  PALESTINE	  32.600	   36.700	140								3																
 429		1182					    									10	ICELAND		ICELAND:  SOUTHLAND	  64.000	  -21.000	120	      11	1																						
+428		1182					    		 6.7						 6.7	10	SYRIA		SYRIA:  BUSRA; ISRAEL:  PALESTINE	  32.600	   36.700	140								3																
 430		1183					    										SYRIA		SYRIA:  DIMASHQ; TURKEY: ANTAKYA; LEBANON: TRIPOLI	  34.500	   36.500	140	   20000	4						3																
 432		1184	5	24			    									10	ITALY		ITALY:  COSENZA	  39.300	   16.200	130								3																
 435		1201	4	25	14											8	SLOVENIA		BALKANS NW:  SLOVENIA:  STYRIA	  46.400	   15.300	130								3												3				
@@ -447,8 +447,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 513		1310	7														CHINA		CHINA:  HUBEI PROVINCE:  KIN MEN	  31.200	  112.200	30	    3466	4						3	21829	4	21829	4	    3466	4						3	21829	4		
 511		1310							 5.5		 5.5					7	IRAQ		IRAQ:  SHAHRIZUR, SULAIMANIYA, BAGHDAD	  35.600	   46.000	140		3						3		3				3						3		3		
 514		1314	10	5					 6.0		 6.0					8	CHINA		CHINA:  HEBEI:  SHEXIAN	  36.500	  113.800	30	     340	3						2		2			     340	3						2		2		
-516		1319														7	IRAN		IRAN:  ST THADDEUS; ARMENIA:  ARARAT, SINI, ANI	  39.100	   44.500	140	      75	2						3		3			      75	2						3		3		
 517		1319														10	ITALY		ITALY:  MONTECASSINO	  41.500	   13.800	130																								
+516		1319														7	IRAN		IRAN:  ST THADDEUS; ARMENIA:  ARARAT, SINI, ANI	  39.100	   44.500	140	      75	2						3		3			      75	2						3		3		
 518		1320	12	9			    									10	PORTUGAL		PORTUGAL:  CABO SAN VICENTE:  SW	  36.000	  -10.700	130																								
 519		1323					    									10	CROATIA		BALKANS NW:  CROATIA	  45.200	   14.700	130																								
 7908		1327	9						 4.8		 4.8					6	CHINA		CHINA:  SICHUAN PROVINCE	  30.100	  102.700	30		1												1										
@@ -512,8 +512,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 575		1390	12	5			    									10	CROATIA		BALKANS NW:  CROATIA	  44.100	   15.200	130																								
 576		1391	3	23			    									8	SWITZERLAND		SWITZERLAND	  47.400	    7.200	120								3																
 577		1399	11	6	20		    									10	CROATIA		BALKANS NW:  CROATIA	  44.100	   15.200	130																								
-578		1400					    										IRAN		IRAN:  RUDBAR	  36.500	   49.000	140								2																
 580		1400					    										IRAN		IRAN:  LAR	  27.700	   54.300	140								2																
+578		1400					    										IRAN		IRAN:  RUDBAR	  36.500	   49.000	140								2																
 581	Tsu	1402					    										SYRIA		SYRIA	  35.000	   37.000	140								3																
 6015	Tsu	1403	11	16													SYRIA		SYRIAN COASTS			140																								
 5944	Tsu	1403	12						 7.0		 7.0						JAPAN		JAPAN:  KUMANONADA	  33.700	  136.500	30																								
@@ -594,8 +594,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 652		1496	1	23	17		    									10	CROATIA		BALKANS NW:  CROATIA	  43.500	   16.100	130																								
 6031	Tsu	1498	7	9					 6.4		 6.4						JAPAN		JAPAN:  ENSHUNADA SEA	  34.400	  137.700	30								1												1				
 5949	Tsu	1498	8	2													VENEZUELA		VENEZUELA: BOCA DE LA SIERPE	   9.900	  -62.300	90																								
-653	Tsu	1498	9	20					 7.5		 7.5						JAPAN		JAPAN:  NANKAIDO	  33.500	  135.200	30								1												1				
 7383	Tsu	1498	9	20					 8.3		 8.3						JAPAN		JAPAN:  ENSHUNADA SEA	  34.000	  138.100	30								1					    5000	4						3	1000	3		
+653	Tsu	1498	9	20					 7.5		 7.5						JAPAN		JAPAN:  NANKAIDO	  33.500	  135.200	30								1												1				
 655		1499															CHINA		CHINA:  YUNNAN PROVINCE:  YI LIANG	  25.000	  103.000	30	   10000	4						4					   10000	4						4				
 656		1500	1	4												9	CHINA		CHINA:  YUNNAN PROVINCE:  YILIANG	  24.900	  103.100	30	   10000	4											   10000	4										
 6697	Tsu	1500															USA	HI	HAWAII			150														2										
@@ -883,8 +883,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 961	Tsu	1645	11	30	12				 8.0		 8.0					10	PHILIPPINES		PHILIPPINES:  LUZON:  S BATANGAS TO N CAGAYAN	  14.400	  121.000	170	     600	3			      2500	4		4		4			     600	3			2500	4		4		4		
 963		1645	12	5	15											7	PHILIPPINES		PHILIPPINES:  LUZON: S BATANGAS TO N CAGAYAN	  14.400	  121.000	170								2		3										2		3		
 964		1646	2	17			    										TURKEY		TURKEY:  VAN	  38.300	   43.200	140								3																
-5970	Tsu	1646	4	5												7	TURKEY		TURKEY: ISTANBUL (CONSTANTINOPLE)	  41.040	   28.980	140																								
 9979	Tsu	1646	4	5					 5.2		 5.2					7	ITALY		ITALY:  LIGURIAN COAST	  43.550	   10.317	130								2				3								2				3
+5970	Tsu	1646	4	5												7	TURKEY		TURKEY: ISTANBUL (CONSTANTINOPLE)	  41.040	   28.980	140																								
 965		1646	5	31	1	30	    									10	ITALY		ITALY:  GARGANO	  41.900	   15.800	130																								
 966	Tsu	1646	6	9					 7.6		 7.6						JAPAN		JAPAN:  SANRIKU:  SENDAI	  37.700	  141.700	30								3												3				
 5971	Tsu	1647	5	7													PERU		PERU	 -15.500	  -75.000	160								1					      14	1						2				
@@ -911,8 +911,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 989		1654					    										PERU		PERU:  LIMA; CHILE	 -12.100	  -76.600	160	   11000	4																						
 994		1655	1				    									10	GREECE		GREECE:  CRETE	  35.000	   25.000	130																								
 998	Tsu	1655	11	13	19	45		30	 7.7		 7.7					10	PERU		PERU:  LIMA, CALLAO	 -12.300	  -77.600	160								2		3										2		3		
-999		1656															PERU		PERU	 -12.500	  -77.000	160	   11000	4						2																
 1000		1656														9	LEBANON		LEBANON:  TARABULUS (TRIPPOLES)	  34.400	   35.850	140								3												3				
+999		1656															PERU		PERU	 -12.500	  -77.000	160	   11000	4						2																
 1002		1657	2	15			    									8	FRANCE		FRANCE:  SAINTE MAURE	  47.100	     .600	120		1						2																
 1003	Tsu	1657	3	15	23	30			 8.0		 8.0					11	CHILE		CHILE:  CONCEPCION, CHILLAN	 -36.830	  -73.030	160		1						3		3			      40	1						3		3		
 7956		1657	4	21					 6.0		 6.0					8	CHINA		CHINA:  SICHUAN PROVINCE	  31.500	  103.600	30		3						3		3				3						3		3		
@@ -1010,8 +1010,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 5987	Tsu	1681	6	12													SOUTH KOREA		SOUTH KOREA:  YANGYANG, SANCHOK	  37.500	  129.500	30																								
 9892	Tsu	1681	12	11													INDONESIA		INDONESIA:  SUMATRA:  MENTAWAI ISLANDS			60																								
 1093		1682	5	12			    									9	FRANCE		FRANCE:  REMIREMONT,FOUGEROLLES,FAUCOGNEY	  48.000	    6.500	120								2																
-1092		1682					    										CUBA		CUBA:  SANTIAGO DE CUBA	  20.000	  -75.500	90								2																
 1091		1682					    										MEXICO		MEXICO:  OAXACA,MEXICO CITY	  17.000	  -96.300	150								3																
+1092		1682					    										CUBA		CUBA:  SANTIAGO DE CUBA	  20.000	  -75.500	90								2																
 1095		1683	11	22					 7.0		 7.0					9	CHINA		CHINA:  SHANXI PROVINCE	  38.700	  112.700	30	    1001	4						4		4			    1001	4						4		4		
 1096		1683	11	27													IRAN		IRAN:  LAR-BIRIZ-BANARUD	  27.700	   54.300	140								3																
 1094		1683					    										ARMENIA		ARMENIA:  JEREVAN (ERIVAN)	  40.100	   44.300	40								3																
@@ -1199,8 +1199,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 1291		1743	10	18	15	45	    										COLOMBIA		COLOMBIA:  BOGOTA	   4.500	  -73.800	160								3																
 6023	Tsu	1744															PHILIPPINES		W. LUZON ISLAND, PHILIPPINES	  17.000	  121.000	170																								
 1295	Tsu	1746	10	29	3	30		30	 8.0		 8.0					11	PERU		PERU:  LIMA, CALLAO	 -11.996	  -77.198	160	    1141	4						4	2975	4			    5941	4						4		3		
-9910	Tsu	1747														7	PHILIPPINES		PHILIPPINES: SE LUZON IS: NAGA	  13.600	  123.200	170																								
 1298		1747						20								9	PERU		PERU:  CARABAYA PROVINCE:  AYAPATA	 -13.900	  -70.350	160		3						3						3						3				
+9910	Tsu	1747														7	PHILIPPINES		PHILIPPINES: SE LUZON IS: NAGA	  13.600	  123.200	170																								
 8095		1748	3	6					 5.5		 5.5					7	CHINA		CHINA:  SICHUAN PROVINCE	  30.100	  101.900	30	      15	1						1	14	1			      15	1			34	1		1	14			
 1299		1748	3	23	6	15										9	SPAIN		SPAIN:  VALENCE	  39.000	    -.650	130		3						2		3				3						2		3		
 8096		1748	5	2					 5.5		 5.5					7	CHINA		CHINA:  SICHUAN PROVINCE	  32.900	  103.600	30								2												2				
@@ -1215,8 +1215,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 1309	Tsu	1750	10													10	BULGARIA		BULGARIA:  PLOVDIV	  42.100	   24.800	110								3		3		3								3		3		
 1310		1750	12	17												10	CROATIA		BALKANS NW:  CROATIA:  RIJEKA (FIUME)	  46.000	   12.250	130		3						3		3				3						3		3		
 5906	Tsu	1750															MYANMAR (BURMA)		MYANMAR (BURMA) COAST	  18.500	   93.400	60																								
-1305		1750															MEXICO		MEXICO:  COLIMA, GUADALAJARA, MEXICO CITY	  20.700	 -103.300	150								3		3										3		3		
 6837	Tsu	1750															VENEZUELA		VENEZUELA:  CUMANA	  10.500	  -64.200	90																								
+1305		1750															MEXICO		MEXICO:  COLIMA, GUADALAJARA, MEXICO CITY	  20.700	 -103.300	150								3		3										3		3		
 1314		1751	4	25			    										COLOMBIA		COLOMBIA:  POPAYAN	   2.500	  -76.500	160								3																
 1315	Tsu	1751	5	20					 6.6		 6.6						JAPAN		JAPAN:  HONSHU:  NW	  37.200	  138.100	30	    2100	4						4	9100	4			    2100	4						4	9100	4		
 1319	Tsu	1751	5	25	5	30			 8.5		 8.5					11	CHILE		CHILE:  CONCEPCION, CHILLAN, TALCA, TUTUBEN, CURICO	 -36.830	  -71.630	160								3		3			      65	2						3		3		
@@ -1398,8 +1398,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 1513		1791	10	22												10	GREECE		GREECE:  ZAKINTHOS (ZANTE)	  37.500	   20.300	130	      22	1						3																
 7506	Tsu	1791	11	2	21				 7.0		 7.0					10	GREECE		GREECE:  ZANTE, GASTUNI	  35.800	   21.000	130	      50	1			        80	2		3		3			      50	1			80	2		3		3		
 1508		1791					    										IRAN		IRAN:  KHOT,TABRIZ,REZAIYEH,KHANEH,VAN,ERZERUM	  38.000	   46.200	140								2																
-1507		1791															MOROCCO		MOROCCO:  MELILLA	  35.300	   -2.970	15								2																
 1506		1791															GUATEMALA		GUATEMALA:  SAN MARCOS	  14.600	  -91.500	100								3												3				
+1507		1791															MOROCCO		MOROCCO:  MELILLA	  35.300	   -2.970	15								2																
 1515	Tsu	1792	5	21					 6.4		 6.4						JAPAN		JAPAN:  KYUSYU ISLAND	  32.800	  130.300	30						2		2		2			   15030	4			707	3		4	6200	4		
 5932	Tsu	1792	6	13					 6.9						 6.9		JAPAN		JAPAN:  W. HOKKAIDO ISLAND	  43.500	  140.600	30														2						1				
 1516	Tsu	1792	8	9					 6.8		 6.8					9	TAIWAN		TAIWAN:  JIAYI, TAINAN	  23.600	  120.500	30	     252	3			       432	3		3	14889	4			     252	3			432	3		3	14889	4		
@@ -1540,8 +1540,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 1654	Tsu	1820	12	29	3	30	    		 6.9		 6.9					10	GREECE		GREECE:  ZAKINTHOS (ZANTE)	  37.750	   21.250	130	       8	1						1	79	2			       8	1						1	79	2		
 1653	Tsu	1820	12	29				80	 7.5		 7.5						INDONESIA		INDONESIA:  SULAWESI:  MAKASAR	  -7.000	  119.000	170													     500	3						2		3		
 1646		1820					    										VENEZUELA		VENEZUELA:  CUMANA	  10.500	  -64.200	160								2																
-1648		1820															IRAN		IRAN:  MAZANDARAN	  36.500	   53.500	140								2												2				
 7978	Tsu	1820							 6.2					6.2		5	CONGO		CONGO:  LOANGO	  -4.500	   11.600	10														3						1				
+1648		1820															IRAN		IRAN:  MAZANDARAN	  36.500	   53.500	140								2												2				
 1655	Tsu	1821	1	6	17	15	    									10	GREECE		GREECE:  ZAKINTHOS (ZANTE)	  37.800	   21.200	130		3						2																
 1656		1821	4	8													MOROCCO		MOROCCO:  MELILLA	  35.300	   -2.970	15								3																
 10078	Tsu	1821	5														UK TERRITORY		UNITED KINGDOM:  BRITIAN	 -15.950	   -5.700	70													       3	1						1				
@@ -1716,8 +1716,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 1852	Tsu	1843	10	18			    									9	GREECE		GREECE:  CHALKI (DODECANESE)	  36.300	   27.500	130		2																						
 1853		1843	12	17	22	15	    									10	CHILE		CHILE	 -29.900	  -71.300	160																								
 1855		1844	4	16	13	20	    									8	USA TERRITORY	PR	PUERTO RICO:  SAN JUAN; ST THOMAS	  18.300	  -66.800	90								2																
-1860		1844	5	12												9	TURKEY		TURKEY:  OSMANCIK, ANKARA	  40.980	   34.800	140	     200	3						3		3			     200	3						3		3		
 1857		1844	5	12					 6.4		 6.4						IRAN		IRAN:  KASHAN, QAMSAR, KAMU, KUSHIAN, CHUKA	  33.600	   51.400	140	    1500	4						3		3			    1500	4						3		3		
+1860		1844	5	12												9	TURKEY		TURKEY:  OSMANCIK, ANKARA	  40.980	   34.800	140	     200	3						3		3			     200	3						3		3		
 1859		1844	5	13					 6.9		 6.9						IRAN		IRAN:  MIYANEH, GARMRUD, ESFAHAN	  37.400	   48.000	140		4						4		4				4						4		4		
 10278	Tsu	1844	5						 7.4		 7.4						NICARAGUA		NICARAGUA: RIVAS, GREYTOWN	  11.200	  -84.800	100								1		1		1								2		2		2
 1862		1844	8	30	7	10	    										SAINT VINCENT AND THE GRENADINES		SAINT VINCENT:  KINGSTOWN	  13.100	  -61.100	90								2																
@@ -1801,8 +1801,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 6534	Tsu	1852	11	29					 7.0		 7.0						MEXICO		N. MEXICO	  32.500	 -115.500	150																								
 6112	Tsu	1852	12	4													MEXICO		S. MEXICO	  17.000	 -100.000	150	       1	1				4		3		3			       1	1				4		3		3		
 1935		1852	12	21	10		    									10	AZORES (PORTUGAL)		AZORES:  FAIAL	  38.300	  -28.400	130																								
-9883	Tsu	1852	12	24					 7.0		 7.0						INDONESIA		INDONESIA:  BANDANEIRA	  -5.000	  130.500	170								1		1				1						1		2		
 1936		1852	12	24												9	PHILIPPINES		PHILIPPINES:  BATANGAS, N MINDANAO	  13.800	  121.100	170								2		3										2		3		
+9883	Tsu	1852	12	24					 7.0		 7.0						INDONESIA		INDONESIA:  BANDANEIRA	  -5.000	  130.500	170								1		1				1						1		2		
 1938		1853	2	1	21		    									8	USA	CA	CALIFORNIA:  SAN SIMEON	  35.500	 -121.000	150								2																
 1939		1853	3	11			    										JAPAN		JAPAN:  ODAWARA	  35.500	  139.500	30	      79	2						3																
 1940		1853	4	9			    									9	ITALY		ITALY:  CAPOSELE,CALABRITTO,LIONI	  40.900	   15.200	130	      12	1						2																
@@ -1873,8 +1873,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 2006	Tsu	1856	11	13					 6.6		 6.6					9	GREECE		GREECE:  CHIOS (E SPORADES)	  38.250	   26.250	130		2						2		3				2						2		3		
 8198	Tsu	1857	1	6													SUDAN		SUDAN:  GONDOKORO, ILENGWE	   4.900	   31.700	15																				1				
 2007		1857	1	9	10	13	    		 8.3						 8.3	7	USA	CA	CALIFORNIA:  SAN FRANCISCO	  35.000	 -119.000	150								3																
-2009		1857	4	9					 6.7		 6.7					9	TURKEY		TURKEY:  HINIS	  38.400	   42.100	140								3		3										3		3		
 2008		1857	4	9													IRAN		IRAN:  LAKE URMIA (LAKE URMI)	  37.400	   45.300	140								3																
+2009		1857	4	9					 6.7		 6.7					9	TURKEY		TURKEY:  HINIS	  38.400	   42.100	140								3		3										3		3		
 6125	Tsu	1857	4	17					 8.0		 8.0						PAPUA NEW GUINEA		PAPUA NEW GUINEA:  BISMARCK SEA	  -5.500	  147.000	170								1						2						2		2		
 6126	Tsu	1857	5	13				50	 7.0		 7.0						INDONESIA		INDONESIA:  TIMOR ISLAND::  DILHI, GERA	  -8.000	  115.500	170	      36	1						2		2			      36	1						2		2		
 8154	Tsu	1857	5	23	9												ALGERIA		ALGERIA:  SEA OF ALBORAN	  36.500	    1.300	15																								
@@ -2154,8 +2154,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 6192	Tsu	1878	1	10					 7.5		 7.5						VANUATU		VANUATU:  TANNA ISLAND	 -19.000	  168.500	170																				1				
 6306	Tsu	1878	1	20													USA	AK	ALASKA:  ALEUTIAN ISLANDS			150																								
 2253	Tsu	1878	1	23	12	5		40	 7.9		 7.9					8	CHILE		CHILE:  TARAPACA	 -19.920	  -70.335	160		1						3		3				1						3		3		
-8119	Tsu	1878	2	4													PERU		PERU:  CALLAO	 -12.000	  -77.000	160																								
 6195	Tsu	1878	2	4													PAPUA NEW GUINEA		PAPUA NEW GUINEA:  BISMARCK SEA	  -4.250	  152.250	170													       1	1										
+8119	Tsu	1878	2	4													PERU		PERU:  CALLAO	 -12.000	  -77.000	160																								
 2254		1878	2	9	19	30	    										COLOMBIA		COLOMBIA:  MANIZALES	   5.100	  -75.500	160								3																
 6625	Tsu	1878	2	11					 8.0		 8.0						VANUATU		VANUATU ISLANDS	 -19.000	  168.500	170																								
 6307	Tsu	1878	2	14													CHILE		CHILE:  CENTRAL	 -36.800	  -73.000	160																								
@@ -2238,8 +2238,8 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 2324		1883	7	28	20	25										10	ITALY		ITALY:  ISCHIA IS: CASAMICCIOLA, FORINO, LACCO AMENO	  40.700	   13.900	130	    2313	4			       374	3		4	2278	4			    2313	4			374	3		4	2278	4		
 2331		1883	10	15	13	30			 7.3		 7.3					10	TURKEY		TURKEY:  AYVALIK, IZMIR, CESME	  38.300	   26.200	140	   15000	4						4	3600	4			   15000	4						4	3600	4		
 2332		1883	10	16	21				 5.8		 5.8					7	IRAN		IRAN:  KANGAN,TAHERI (TAHIRI)	  27.500	   52.300	140								2												2				
-7710	Tsu	1884	1													7	FIJI		FIJI:  MACUATA	 -16.000	  179.000	170								1												1				
 8105		1884	1						 5.3		 5.3					7	TAIWAN		TAIWAN:  JIAYI	  23.500	  120.400	30								2		3										2		3		
+7710	Tsu	1884	1													7	FIJI		FIJI:  MACUATA	 -16.000	  179.000	170								1												1				
 2333		1884	5	19												8	IRAN		IRAN:  QESHM I,BANDAR-E-LAFT,SAHELI,TONBAN,DIRESTAN	  26.810	   55.910	140	     238	3			       500	3		3		3			     238	3			500	3		3		3		
 8201		1884	7	20	9	30			 6.2		 6.2						ERITREA		ERITREA:  MASSAWA, MUNCULLO	  15.700	   39.600	15								2		3										2		3		
 6516	Tsu	1884	8	10	19	7			 5.5					5.5		7	USA	NY	NEW YORK: ROCKAWAY BEACH, NEAR NEW YORK CITY	  40.600	  -73.750	150																								
@@ -2765,14 +2765,14 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 2990		1913	11	4	21	33		10	 6.3		 6.3					10	PERU		PERU:  AMYARAES, ABANCAY, CASAYA, SORAYA	 -14.200	  -72.900	160	     150	3						3		3			     150	3						3		3		
 2992		1913	11	10	21	12	    	80	 7.5						 7.5		VANUATU		VANUATU ISLANDS	 -18.000	  169.000	170																								
 2993		1913	12	21	15	37	 38.0	10	 7.0		 7.0					9	CHINA		CHINA:  YUNNAN PROVINCE	  24.150	  102.450	30	     942	3			       112	3		3		4			     942	3			112	3		3		4		
-6262	Tsu	1914	1	12				33									PERU		PERU:  CALLAO	 -12.000	  -76.600	160																								
 2994	Tsu	1914	1	12					 7.1		 7.1						JAPAN		JAPAN:  SAKURIJIMA	  31.580	  130.670	30	      29	1						1	120	3			      63	1			112	3	      19.000	3	2268	4		
+6262	Tsu	1914	1	12				33									PERU		PERU:  CALLAO	 -12.000	  -76.600	160																								
 7785	Tsu	1914	1	15	4	28										6	ITALY		ITALY:  LIGURIAN COAST	  43.500	   10.200	130																								
 2997		1914	1	30	3	35	 50.0	33	 7.6		 7.6						CHILE		CHILE:  OFF CENTRAL COAST	 -35.000	  -73.000	160																								
 6578	Tsu	1914	2	26	4	58	 12.0	130	 7.2		 7.2						PERU		PERU:  AREQUIPA	 -17.000	  -72.000	160																								
 2999		1914	3	15	20	0	  6.0	33	 7.2		 7.2						JAPAN		JAPAN:  SENHOKU	  39.200	  139.800	30	      94	2						3	640	3			      94	2						3	640	3		
 3001		1914	3	30	0	41	    	150	 7.5						 7.5		MEXICO		MEXICO:  CHIAPAS	  16.800	  -92.200	150																								
-3002		1914	5	8	18	1			 4.9		 4.9					10	ITALY		ITALY:  CATANIA,ETNA	  37.700	   15.200	130	     120	3						3	223	3			     120	3						3	223	3		
+3002		1914	5	8	18	1			 4.9		 4.9					10	ITALY		ITALY:  CATANIA, ETNA	  37.700	   15.200	130	     120	3						3	223	3			     120	3						3	223	3		
 3005	Tsu	1914	5	26	14	22	 47.7	15	 8.1	 8.1	 8.0	 7.3				9	INDONESIA		INDONESIA:  NEW GUINEA:  IRIAN JAYA:  JAPEN	  -1.829	  136.943	170		3						2		3				3						2		3		
 3007		1914	5	28	11	27	    		 5.6						 5.6	7	TURKEY		TURKEY:  GEMEREK	  39.200	   36.000	140								2																
 3008		1914	5	31			    	10	 5.8						 5.8	10	ECUADOR		ECUADOR:  MONTE PULLERINA	   -.200	  -78.200	160																								
@@ -4765,7 +4765,7 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 5320		1992	4	23	4	50	 23.2	12	 6.3		 6.3	 5.7	6.1			7	USA	CA	CALIFORNIA:  JOSHUA TREE, ANGELUS OAKS	  33.961	 -116.318	150					        32	1		2									32	1		2				
 5321	Tsu	1992	4	25	18	6	  4.2	15	 7.1		 7.1	 6.3				8	USA	CA	CALIFORNIA: HUMBOLDT COUNTY: FERNDALE, PETROLIA	  40.368	 -124.316	150					        98	2	      75.000	4									98	2	      75.000	4				
 5323		1992	5	15	8	8	  2.9	50	 6.2		 6.2	 5.7				7	KYRGYZSTAN		KYRGYZSTAN:  OSH; UZBEKISTAN:  ANDIZHAN	  41.019	   72.429	40	       4	1					      31.000	4	5500	4	4000	4	       4	1					      31.000	4	5500	4	4000	4
-5324	Tsu	1992	5	17	10	15	 31.3	33	 7.5		 7.5	 6.4					PHILIPPINES		PHILIPPINES:  MINDANAO, TANDAG, BISLIG	   7.191	  126.762	170								1												1				
+5324	Tsu	1992	5	17	10	15	 31.3	33	 7.5		 7.5	 6.4					PHILIPPINES		PHILIPPINES:  MINDANAO, TANDAG, BISLIG	   7.191	  126.762	170								1												1	12	1		
 5325		1992	5	20	12	20	 32.8	16	 6.0		 6.0	 6.0					PAKISTAN		PAKISTAN:  PESHAWAR, KOHAT, SHAKKAR KHEL	  33.377	   71.317	60	      36	1			       100	2		2	400	3			       6	1			100	2		2	400	3		
 5327		1992	5	25	16	55	  4.1	23	 7.0		 7.0	 6.3					CUBA		CUBA:  PILON, MANZANILLO	  19.613	  -77.872	90					        40	1		2			820	3					40	1		2			820	3
 6331	Tsu	1992	5	27	5	13	 38.8	19	 7.0		 7.0	 6.3					SOLOMON ISLANDS		SOLOMON ISLANDS:  SANTA CRUZ ISLANDS	 -11.122	  165.239	170																								
@@ -5401,7 +5401,7 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 7501		2007	4	13	5	42	 23.0	34	 6.0	 6.0	 5.8	 5.9				5	MEXICO		MEXICO:  GUERRERO, ATOYAC	  17.302	 -100.198	150								1	2	1										1	2	1		
 7502		2007	4	15	3	19	 30.3	16	 4.6		 4.6	 5.4					JAPAN		JAPAN:  HONSHU:  W	  34.807	  136.239	30					        12	1		2	63	1							12	1		2	63	2		
 7503		2007	4	16	7	38	 53.8	14	 4.5			 4.5	5.2				ALBANIA		ALBANIA:  TIRANA	  41.172	   19.897	130								1		1												1		
-7465	Tsu	2007	4	21	17	53	 46.3	37	 6.2	 6.2	 6.3	 6.1					CHILE		CHILE:  SOUTHERN	 -45.243	  -72.648	160	       2	1						1			2	1	      10	1						1			2	1
+7465	Tsu	2007	4	21	17	53	 46.3	37	 6.2	 6.2	 6.3	 6.1				7	CHILE		CHILE:  SOUTHERN	 -45.243	  -72.648	160	       2	1						1			2	1	      10	1						1			2	1
 7526		2007	4	28	7	18	 11.3	10	 4.6			 4.6	5			6	UK		UNITED KINGDOM:  ENGLAND:  FOLKESTONE	  51.085	    1.009	120					         1	1		1									1	1		1				
 7522		2007	5	8	15	46	 49.1	14	 4.5	 4.5		 4.8	4.7			5	USA	MT	MONTANA:  SHERIDAN	  45.394	 -112.130	150								1												1				
 7523		2007	5	16	8	56	 16.4	24	 6.3	 6.3	 6.4	 5.7					LAOS		LAOS:  BOKEO;  THAILAND:  CHIANG RAI, CHIAN SAEN	  20.504	  100.746	60								1												1				
@@ -5421,7 +5421,7 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 7532	Tsu	2007	8	2	3	21	 42.8	21	 6.7	 6.7	 6.6	 6.3					USA	AK	ALASKA:  ALEUTIAN ISLANDS	  51.307	 -179.971	150																								
 7601		2007	8	6	8	48	 40.0	2	 4.2			 4.2	3.9				USA	UT	UTAH:  HUNTINGTON	  39.465	 -111.237	150	       9	1				1							       9	1				1						
 7533		2007	8	8	17	4	 58.0	289	 7.5	 7.5							INDONESIA		INDONESIA:  JAVA	  -5.968	  107.655	170																								
-7537	Tsu	2007	8	15	23	40	 57.8	39	 8.0	 8.0	 7.9	 6.7				8	PERU		PERU:  ICA, PISCO, LIMA	 -13.386	  -76.603	160	     514	3			      1090	4		4	39700	4			     514	3			1090	4		4	39700	4		
+7537	Tsu	2007	8	15	23	40	 57.8	39	 8.0	 8.0	 7.9	 6.7				8	PERU		PERU:  ICA, PISCO, LIMA	 -13.386	  -76.603	160	     514	3			      1090	4		4	52154	4	23632	4	     514	3			1090	4		4	52154	4	23632	4
 7614		2007	8	17	0	38	 56.0	0	 1.6				1.6				USA	UT	UTAH	  39.464	 -111.207	150	       3	1			         6	1							       3	1			6	1						
 7615		2007	8	20	19	15	 53.5	5	 4.4			 4.4	4				INDIA		INDIA:  MAHARASHTRA:  SATARA	  17.200	   73.700	60								1												1				
 7616		2007	8	25	4	24	 21.9	10	 5.0			 5.0	4.5				IRAN		IRAN:  HADJI ABAD, ORZUIYEH	  28.154	   56.652	140					         4	1											4	1						
@@ -5910,49 +5910,57 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 10168		2015	12	7	7	51	 35.0	22	 7.2	 7.2						3	TAJIKISTAN		TAJIKISTAN	  38.211	   72.780	40	       2	1				3	       5.000	2	500	3		3	       2	1				3	       5.000	2	500	3		3
 10350		2015	12	17	19	49	  5.0	85	 6.6	 6.6						5	MEXICO		MEXICO:  COCOTITLAN	  15.802	  -93.633	150	       2	1											       2	1										
 10169		2015	12	25	19	14	 19.0	206	 6.3	 6.3						5	AFGHANISTAN		AFGHANISTAN; PAKISTAN	  36.494	   71.126	40	       4	1			        97	2		1		1		1	       4	1			97	2		1		1		1
-10170		2016	1	3	23	5	 27.0	55	 6.7	 6.7						7	INDIA		INDIA:  IMPAHL	  24.804	   93.651	60	      13	1			       100	2		1				2	      13	1			100	2		1				2
+10170		2016	1	3	23	5	 27.0	55	 6.7	 6.7						7	INDIA		INDIA:  IMPAHL	  24.804	   93.651	60	      13	1			       100	2	      75.000	4				2	      13	1			100	2	      75.000	4				2
 10171		2016	1	16	23	22	  4.0	4	 5.6	 5.6						3	INDONESIA		INDONESIA: MALUKU:  BURU, AMBALAU ISLAND	  -3.873	  127.229	170	       1	1			        22	1		1			230	3	       1	1			22	1		1			230	3
 10172		2016	1	24	10	30	 56.0	126	 7.1	 7.1						6	USA	AK	ALASKA:  KENAI	  59.658	 -153.452	150								1	4	1										1	4	1		
 10173		2016	1	25	4	23	 13.0	12	 6.3	 6.3						6	MOROCCO		MOROCCO:  MELILLA	  35.649	   -3.682	15	       1	1			        26	1		1		1		1	       1	1			26	1		1		1		1
-10174		2016	2	5	19	57	  6.0	10	 6.4	 6.4						7	TAIWAN		TAIWAN:  TAINAN	  22.970	  120.460	30	     117	3			       525	3		3		1		1	     117	3			525	3		3		1		1
+10174		2016	2	5	19	57	  6.0	10	 6.4	 6.4						7	TAIWAN		TAIWAN:  TAINAN	  22.970	  120.460	30	     117	3			       525	3	     700.000	4		1		1	     117	3			525	3	     700.000	4		1		1
 10175	Tsu	2016	3	2	12	49	 11.0	24	 7.8	 7.8						5	INDONESIA		INDONESIA: SUMATRA:	  -4.952	   94.330	60																								
-10186		2016	4	10	10	28	 58.0	212	 6.6	 6.6							AFGHANISTAN		AFGHANISTAN:  KHYBER PAKHTUNKHWA	  36.472	   71.131	40	       6	1			         5	1		1			20	1	       6	1			5	1		1			20	1
-10177		2016	4	15	16	25	  6.0	10	 7.0	 7.0							JAPAN		JAPAN:  KUMAMOTO, OITA	  32.782	  130.726	30	      50	1			      1500	4	    4600.000	4	80000	4			      50	1			1500	4	    4600.000	4	80000	4		
-10176	Tsu	2016	4	16	23	58	 36.0	21	 7.8	 7.8							ECUADOR		ECUADOR:  NEAR WEST COAST: MANABI, ESMERALDAS	    .382	  -79.922	160	     663	3	9	1	      6274	4	    3300.000	4	6998	4	29672	4	     663	3	9	1	6274	4	    3300.000	4	6998	4	29672	4
-10179	Tsu	2016	4	28	19	33	 24.0	27	 7.0	 7.0							VANUATU		VANUATU ISLANDS	 -16.074	  167.393	170																								
-10178		2016	5	11	1	15	 47.0	10	 5.5	 5.5							CHINA		CHINA:  TIBET (XIZANG PROVINCE)	  32.038	   94.987	40					        60	2		1		1							60	2		1		1		
-10181		2016	5	18	16	46	 11.0	31	 6.8	 6.8							ECUADOR		ECUADOR:  MANABI PROVINCE	    .465	  -79.641	160	       1	1			       162	3		1		1	32	1	       1	1			162	3		1		1	32	1
-10185		2016	6	7	19	15	 16.0	38	 6.3	 6.3							INDONESIA		INDONESIA:  MALUKU:  TERNATE ISLAND	   1.295	  126.355	170								1				3								1				3
-10187		2016	7	1	14	58	 55.0	10	 5.4	 5.4							TAJIKISTAN		TAJIKISTAN:  RASHT	  38.883	   70.626	40								1			31	1								1	31	1		
-10188		2016	7	29	21	18	 25.0	212	 7.7	 7.7							USA TERRITORY	MP	NORTHERN MARIANA ISLANDS	  18.515	  145.529	170																								
-10189		2016	7	31	23	40	    	10	 5.9	 5.9							INDONESIA		INDONESIA:  SUMBAWA ISLAND:  WEST NUSA TENGGARA	  -8.218	  117.816	60					         4	1		2			700	3					4	1		2			700	3
-10190	Tsu	2016	8	12	1	26	 35.0	10	 7.2	 7.2							NEW CALEDONIA		NEW CALEDONIA:  LOYALTY ISLANDS	 -22.495	  173.111	170																								
-10191		2016	8	15	2	58	 59.0	10	 5.4	 5.4							PERU		PERU:  AREQUIPA	 -15.613	  -71.671	160	       4	1			        67	2		1	689	3	1291	3	       4	1			67	2		1	689	3	1291	3
-10192	Tsu	2016	8	19	7	32	 22.0	10	 7.4	 7.4							SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS		SOUTH SANDWICH ISLANDS	 -55.279	  -31.874	70																								
-10194		2016	8	24	1	36	 32.0	4	 6.2	 6.2						8	ITALY		ITALY:  ACCUMOLI, ARQUATA, AMATRICE	  42.723	   13.188	130	     299	3	15	1	       368	3	    5500.000	4		3		2	     299	3	15	1	368	3	    5500.000	4		3		2
-10195		2016	8	24	10	34	 55.0	84	 6.8	 6.8						6	MYANMAR (BURMA)		MYANMAR (BURMA): CHAUK	  20.919	   94.579	60	       3	1			        20	1		2			200	3	       3	1			20	1		2			200	2
-10196	Tsu	2016	9	1	16	37	 57.0	19	 7.1	 7.1						6	NEW ZEALAND		NEW ZEALAND:  GISBORNE	 -37.401	  179.055	170																								
-10197		2016	9	10	12	27	 33.0	40	 5.9	 5.9							TANZANIA		TANZANIA:  LAKE VICTORIA	  -1.030	   31.560	10	      19	1			       252	3	     458.000	4	1044	4	6281	4	      19	1			252	3	     458.000	4	1044	4	6281	4
-10198		2016	9	11	13	10	  7.0	10	 5.3	 5.3							MACEDONIA		BALKANS NW:  MACEDONIA	  42.012	   21.481	130					        30	1		1				1					30	1		1				1
-10199		2016	9	12	11	32	 54.0	10	 4.6	 4.6							SOUTH KOREA		SOUTH KOREA:  GYEONGJU	  35.769	  129.227	30	       1	1			        14	1		1			106	3	       1	1			14	1		1			106	3
-10228		2016	9	23	19	11	 56.0	10	 4.8		 4.8						RWANDA		RWANDA:  RISUZI; CONGO:  UKAVU	  -2.650	   29.060	10	       3	1			        25	1		1		1			       3	1			25	1		1		1		
-10229		2016	10	1	8	4	 34.0	10	 5.4	 5.4							PAKISTAN		PAKISTAN:  MANSEHRA, NARAN	  34.905	   73.682	60	       1	1				2		1		2			       1	1				2		1		2		
-10200		2016	10	21	5	7	 23.0	10	 6.2	 6.2							JAPAN		JAPAN:  KURAYOSHI	  35.374	  133.809	30					         7	1		1	2	1	160	3					7	1		1	2	1	160	3
-10201		2016	10	26	19	18	  8.0	10	 6.1	 6.1							ITALY		ITALY:  VISSO, USSITA	  42.956	   13.067	130	       1	1				1		1			1001	4	       1	1				1		1			1001	4
-10202		2016	10	30	6	40	 18.0	8	 6.6	 6.6							ITALY		ITALY: NORCIA	  42.862	   13.096	130					        12	1		1		1		1					12	1		1		1		1
-10204		2016	11	7	1	44	 24.0	5	 5.0	 5.0							USA	OK	OKLAHOMA:  CUSHING	  35.984	  -96.798	150						1		1			50	1						1		1			50	1
-10206	Tsu	2016	11	13	11	2	 56.0	53	 7.8	 7.8							NEW ZEALAND		NEW ZEALAND:  AMBERLEY	 -42.757	  173.077	170	       2	1						2				1	       2	1					    3900.000	4	1	1		1
-10209	Tsu	2016	11	21	20	59	 49.0	11	 6.9	 6.9							JAPAN		JAPAN: NEAR E COAST HONSHU	  37.392	  141.403	30						1		1										1		1				
-10211	Tsu	2016	11	24	18	43	 48.0	10	 7.0	 7.0							NICARAGUA		NICARAGUA	  11.960	  -88.835	100																								
-10230		2016	11	27	23	35	 21.0	10	 5.4	 5.4							NEPAL		NEPAL:   MOUNT AMA DABLAM, CHARIKHARKA	  27.806	   86.532	40	       1	1			         1	1		1	2	1			       1	1			1	1		1	2	1		
-10231		2016	11	29	20	9	 39.0	5									POLAND		POLAND:  RUDNA	  51.613	   16.157	120	       8	1			         9	1		1					       8	1			9	1		1				
-10232		2016	12	1	22	40	 15.0	10	 6.2	 6.2							PERU		PERU:  PUNO, LAMPA	 -15.294	  -70.823	160	       1	1			        17	1		1	8	1	40	1	       1	1			17	1		1	8	1	40	1
-10215		2016	12	6	22	3	 32.0	8	 6.5	 6.5							INDONESIA		INDONESIA:  SUMATRA:  ACEH:  PIDIE JAYA	   5.281	   96.108	60	     104	3			       600	3	     233.000	4	245	3	18752	4	     104	3			857	3	     233.000	4	245	3	18752	4
-10218		2016	12	8	17	38	 46.0	41	 7.8	 7.8							SOLOMON ISLANDS		SOLOMON ISLANDS	 -10.665	  161.335	170	       1	1						1	191	3	126	3	       1	1						1	191	3	126	3
-10219	Tsu	2016	12	9	19	10	  7.0	21	 6.9	 6.9							SOLOMON ISLANDS		SOLOMON ISLANDS	 -10.730	  161.107	170																								
-10220	Tsu	2016	12	17	10	51	 12.0	103	 7.9	 7.9							PAPUA NEW GUINEA		PAPUA NEW GUINEA:  NEW BRITAIN NEW IRELAND	  -4.509	  153.450	170																								
-10221		2016	12	19	7	11	 39.0	10	 5.4	 5.4							ECUADOR		ECUADOR:  ESMERALDAS	    .816	  -79.740	160	       3	1						1	10	1	65	1	       3	1			15	1		1	10	1	65	1
-10224	Tsu	2016	12	25	14	22	 27.0	35	 7.6	 7.6							CHILE		CHILE	 -43.416	  -73.880	160								1												1				
+10186		2016	4	10	10	29	 12.0	212	 6.6	 6.6						5	AFGHANISTAN		AFGHANISTAN:  KHYBER PAKHTUNKHWA	  36.473	   71.131	40	       6	1			         5	1		1			20	1	       6	1			5	1		1			20	1
+10363		2016	4	13	13	55	  8.0	136	 6.9	 6.9						5	MYANMAR (BURMA)		INDIA: ASSAM; BANGLADESH	  23.094	   94.865	60	       2	1			       170	3		2			4	1	       2	1			170	3		2			4	1
+10177		2016	4	15	16	25	 22.0	10	 7.0	 7.0						8	JAPAN		JAPAN:  KUMAMOTO, OITA	  32.791	  130.754	30	      50	1			      1500	4	   20000.000	4	80000	4			      50	1			1500	4	   20000.000	4	80000	4		
+10176	Tsu	2016	4	16	23	58	    	17	 7.8	 7.8						8	ECUADOR		ECUADOR:  NEAR WEST COAST: MANABI, ESMERALDAS	    .350	  -80.160	160	     663	3	9	1	      6274	4	    3300.000	4	6998	4	29672	4	     663	3	9	1	6274	4	    3300.000	4	6998	4	29672	4
+10179	Tsu	2016	4	28	19	33	  7.0	24	 7.0	 7.0							VANUATU		VANUATU ISLANDS	 -16.043	  167.379	170																								
+10178		2016	5	11	1	15	 22.0	8	 5.2	 5.2							CHINA		CHINA:  TIBET (XIZANG PROVINCE)	  32.022	   95.027	40					        60	2		1		1							60	2		1		1		
+10181		2016	5	18	16	47	 26.0	30	 6.9	 6.9						4	ECUADOR		ECUADOR:  MANABI PROVINCE	    .495	  -79.616	160	       1	1			       162	3		1		1	32	1	       1	1			162	3		1		1	32	1
+10364		2016	5	28	23	54	 38.0	11	 5.4	 5.4						5	ALGERIA		ALGERIA:  MEDEA:  MIHOUB	  36.431	    3.517	15					        28	1		2		3		1					28	1		2		3		1
+10365		2016	6	1	22	56	  8.0	50	 6.6	 6.6						5	INDONESIA		INDONESIA:  SUMATRA:  PESISIR SELATAN	  -2.097	  100.665	60	       1	1			        30	1		2			2663	4	       1	1			30	1		2			2663	4
+10185		2016	6	7	19	15	 33.0	31	 6.3	 6.3						4	INDONESIA		INDONESIA:  MALUKU:  TERNATE ISLAND	   1.279	  126.371	170								1				1								1				1
+10187		2016	7	1	14	59	 15.0	10	 5.0	 5.0							TAJIKISTAN		TAJIKISTAN:  RASHT	  38.881	   70.559	40								1	31	1										1	31	1		
+10188		2016	7	29	21	19	 14.0	196	 7.7	 7.7						4	USA TERRITORY	MP	NORTHERN MARIANA ISLANDS	  18.543	  145.507	170																								
+10366		2016	7	31	9	18	 17.0	25	 4.9			 4.9					CHINA		CHINA:  GUANGXI PROVINCE	  24.134	  111.478	30								2			200	3								2			200	3
+10189		2016	7	31	23	41	 28.0	21	 5.6	 5.6						6	INDONESIA		INDONESIA:  SUMBAWA ISLAND:  WEST NUSA TENGGARA	  -8.194	  117.814	60					         4	1		2			700	3					4	1		2			700	3
+10190	Tsu	2016	8	12	1	26	 28.0	16	 7.2	 7.2							NEW CALEDONIA		NEW CALEDONIA:  LOYALTY ISLANDS	 -22.477	  173.117	170																								
+10191		2016	8	15	2	58	    	8	 5.5	 5.5						6	PERU		PERU:  AREQUIPA	 -15.640	  -71.680	160	       9	1			        68	2		2	605	3	671	3	       9	1			68	2		2	605	3	671	3
+10192	Tsu	2016	8	19	7	33	 11.0	10	 7.4	 7.4							SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS		SOUTH SANDWICH ISLANDS	 -55.285	  -31.877	70																								
+10194		2016	8	24	1	36	  2.0	4	 6.2	 6.2						9	ITALY		ITALY:  ACCUMOLI, ARQUATA, AMATRICE	  42.704	   13.238	130	     299	3	15	1	       368	3	    5000.000	4		3		2	     299	3	15	1	368	3	    5000.000	4		3		2
+10195		2016	8	24	10	34	 58.0	82	 6.8	 6.8						5	MYANMAR (BURMA)		MYANMAR (BURMA): CHAUK	  20.923	   94.569	60	       4	1			        20	1	      10.000	3			230	3	       4	1			20	1	      10.000	3			230	2
+10196	Tsu	2016	9	1	16	37	  3.0	19	 7.0	 7.0						5	NEW ZEALAND		NEW ZEALAND:  GISBORNE	 -37.359	  179.146	170																								
+10197		2016	9	10	12	27	 41.0	40	 5.9	 5.9							TANZANIA		TANZANIA:  LAKE VICTORIA;  UGANDA: RAKAI	  -1.036	   31.618	10	      23	1			       252	3	     458.000	4	1172	4	6281	4	      23	1			252	3	     458.000	4	1172	4	6281	4
+10198		2016	9	11	13	10	  7.0	13	 5.1	 5.1						6	MACEDONIA		BALKANS NW:  MACEDONIA	  42.008	   21.488	130					        30	1	      10.000	3				1					30	1	      10.000	3				1
+10199		2016	9	12	11	33	 17.0	13	 5.4	 5.4						6	SOUTH KOREA		SOUTH KOREA:  GYEONGJU	  35.781	  129.216	30	       1	1			        14	1	      21.000	3			106	3	       1	1			14	1	      21.000	3			106	3
+10228		2016	9	23	16	12	  1.0	10	 4.8			 4.8					RWANDA		RWANDA:  RISUZI; CONGO:  UKAVU	  -2.650	   29.060	10	       8	1				1		1	22	1			       8	1				1		1	22	1		
+10373		2016	9	28	16	49	  1.0	8	 5.5	 5.5						4	NICARAGUA		NICARAGUA:  LEON	  12.442	  -86.515	100	       1	1			         5	1		2	6	1	487	3	       1	1			5	1		2	6	1	487	3
+10229		2016	10	1	8	4	 33.0	10	 5.4			 5.4				2	PAKISTAN		PAKISTAN:  MANSEHRA, NARAN	  34.905	   73.682	60	       1	1				2		1		2			       1	1				2		1		2		
+10200		2016	10	21	5	8	 39.0	6	 6.2	 6.2						6	JAPAN		JAPAN:  KURAYOSHI	  35.374	  133.809	30					         7	1	     100.000	4	2	1	160	3					7	1	     100.000	4	2	1	160	3
+10201		2016	10	26	19	18	 43.0	10	 6.1	 6.1						7	ITALY		ITALY:  VISSO, USSITA	  42.956	   13.067	130	       1	1				1		4			1001	4	       1	1				1		4			1001	4
+10202		2016	10	30	6	40	  5.0	9	 6.6	 6.6						7	ITALY		ITALY: NORCIA	  42.840	   13.110	130	       2	1			        20	1	     200.000	4		1		4	       2	1			20	1	     200.000	4		1		4
+10204		2016	11	7	1	44	  7.0	3	 5.0	 5.0						6	USA	OK	OKLAHOMA:  CUSHING	  35.988	  -96.805	150						1	      20.000	3			50	1						1	      20.000	3			50	1
+10206	Tsu	2016	11	13	11	2	 34.0	15	 7.8	 7.8						8	NEW ZEALAND		NEW ZEALAND:  AMBERLEY	 -42.737	  173.054	170	       2	1						2				1	       2	1					    3900.000	4	1	1		1
+10209	Tsu	2016	11	21	20	59	 27.0	9	 6.9	 6.9						7	JAPAN		JAPAN: NEAR E COAST HONSHU	  37.393	  141.387	30					        15	1		1									15	1		1				
+10211	Tsu	2016	11	24	18	43	    	33	 6.9	 6.9						5	NICARAGUA		NICARAGUA	  11.960	  -88.835	100																								
+10386		2016	11	25	14	25	 11.0	17	 6.6	 6.6						7	CHINA		CHINA:  XINJIANG PROVINCE:  KASHGAR	  39.273	   73.978	40	       1	1					       5.500	3		2			       1	1					       5.500	3		2		
+10230		2016	11	27	23	35	  2.0	10	 5.4			 5.4				4	NEPAL		NEPAL:   MOUNT AMA DABLAM, CHARIKHARKA	  27.802	   86.532	40	       1	1			         1	1		1	2	1			       1	1			1	1		1	2	1		
+10231		2016	11	29	20	9	 35.0	5	 4.2	 4.2							POLAND		POLAND:  RUDNA	  51.613	   16.157	120	       8	1			         9	1		1					       8	1			9	1		1				
+10379		2016	12	1	0	25	 38.0	1	 5.3	 5.3						6	COSTA RICA		COSTA RICA:  PARAISO, TURRIALBA	   9.949	  -83.807	100								2			60	2								2			60	2
+10232		2016	12	1	22	40	    	10	 6.2	 6.2						6	PERU		PERU:  PUNO, LAMPA	 -15.440	  -70.930	160	       1	1			        17	1		1	8	1	40	1	       1	1			17	1		1	8	1	40	1
+10215		2016	12	6	22	3	 39.0	13	 6.5	 6.5						8	INDONESIA		INDONESIA:  SUMATRA:  ACEH:  PIDIE JAYA	   5.283	   96.168	60	     104	3			       857	3	     100.000	4	245	3	18752	4	     104	3			857	3	     100.000	4	245	3	18752	4
+10380		2016	12	8	5	15	  6.0	18	 6.0	 6.0						3	CHINA		CHINA:  N. XINJIANG:  URUMQI	  43.823	   86.345	40	       1	1					     135.000	4					       1	1					     135.000	4				
+10218	Tsu	2016	12	8	17	38	 28.0	40	 7.8	 7.8						8	SOLOMON ISLANDS		SOLOMON ISLANDS	 -10.681	  161.327	170	       1	1						1	191	3	126	3	       1	1						1	191	3	126	3
+10219	Tsu	2016	12	9	19	11	 24.0	20	 6.9	 6.9						7	SOLOMON ISLANDS		SOLOMON ISLANDS	 -10.749	  161.132	170																								
+10220	Tsu	2016	12	17	10	51	  5.0	95	 7.9	 7.9						7	PAPUA NEW GUINEA		PAPUA NEW GUINEA:  NEW BRITAIN NEW IRELAND	  -4.505	  153.522	170																								
+10221		2016	12	19	7	11	    	6	 5.4	 5.4						6	ECUADOR		ECUADOR:  ESMERALDAS	    .930	  -79.840	160	       3	1			        47	1		2	10	1	70	2	       3	1			47	1		2	10	1	70	2
+10224	Tsu	2016	12	25	14	22	    	30	 7.6	 7.6						7	CHILE		CHILE	 -43.517	  -74.391	160								1												1				
 10226		2017	1	3	9	9	  2.0	32	 5.7	 5.7							INDIA		INDIA:  AMBASA;  BANGLADESH	  24.015	   92.018	60	       3	1				1		1				2	       3	1				1		1				2
 10225	Tsu	2017	1	3	21	52	 31.0	17	 6.9	 6.9							FIJI		FIJI ISLANDS	 -19.326	  176.053	170																								
 10227		2017	1	6	2	33	 29.0	10	 5.0	 5.0							IRAN		IRAN:  KHONJ	  28.200	   53.107	140	       4	1			         4	1		1					       4	1			4	1		1				
@@ -6031,9 +6039,9 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 10328		2018	4	24	0	34	 31.0	10	 5.2	 5.2							TURKEY		TURKEY:  ADIYAMAN	  37.596	   38.514	140					        39	1		1				1					39	1		1				1
 10329		2018	5	2	4	8	 13.0	10	 5.3	 5.3							IRAN		IRAN:  KOHGILUYEH AND BOYER-AHMAD: SISAKHT	  30.715	   51.485	140					       133	3		2				1					133	3		2				1
 10330		2018	5	3	11	17			 2.1				2.1				SOUTH AFRICA		SOUTH AFRICA:  WEST RAND	 -26.400	   27.500	10	       7	1			         6	1							       7	1			6	1						
-10332	Tsu	2018	5	4	22	32	 55.0	5	 6.9	 6.9							USA	HI	HAWAIIAN ISLANDS: PUNA DISTRICT	  19.370	 -155.032	150								1									1	1		4	600	3		
+10332	Tsu	2018	5	4	22	32	 55.0	5	 6.9	 6.9							USA	HI	HAWAIIAN ISLANDS: PUNA DISTRICT	  19.370	 -155.032	150								1									1	1		4	700	3		
 10331		2018	5	5	8	58	  7.0	10	 4.1			 4.1					POLAND		POLAND:  SILESIAN:  JASTRZEBIE-ZDROJ	  50.110	   18.710	120	       5	1			         2	1		1					       5	1			2	1		1				
-10334		2018	5	6	19	2	 22.0	10	 5.6	 5.6							EL SALVADOR		EL SALVADOR:  LA UNION, SAN MIGUEL	  13.095	  -88.099	100								2	11	1	289	3								2	11	1	289	3
+10334		2018	5	6	19	2	 22.0	10	 5.6	 5.6							EL SALVADOR		EL SALVADOR:  LA UNION, SAN MIGUEL	  13.095	  -88.099	100					         1	1		2	11	1	298	3					1	1		2	11	1	298	3
 10333		2018	5	9	10	41	 45.0	112	 6.2	 6.2							AFGHANISTAN		AFGHANISTAN: TAKHAR;  PAKISTAN	  36.990	   71.369	40					        13	1		1		1	45	1					13	1		1		1	45	1
 10337		2018	5	15	15	48	  9.0	17	 5.8	 5.8							COMOROS		COMOROS:  MAYOTTE	 -12.778	   45.593	60					         3	1		1				1					3	1		1				1
 10339		2018	5	27	17	50	 52.0	10	 5.1	 5.1							CHINA		CHINA:  JILIN PROVINCE:  NINGJIANG	  45.279	  124.557	30								3			10000	4								3			10000	4
@@ -6043,4 +6051,34 @@ I_D	FLAG_TSUNAMI	YEAR	MONTH	DAY	HOUR	MINUTE	SECOND	FOCAL_DEPTH	EQ_PRIMARY	EQ_MAG
 10348		2018	7	21	7	58	 15.0	10	 5.2	 5.2							INDONESIA		INDONESIA: SUMATRA: SOLOK	   -.965	  100.771	60	       1	1			         2	1		1	2	1	10	1	       1	1			2	1		1	2	1	10	1
 10347		2018	7	22	10	7	 26.0	6	 5.9			 5.9					IRAN		IRAN:  KERMANSHAH	  34.645	   46.179	140					       287	3		2			951	3					287	3		2			951	3
 10349		2018	7	28	22	47	 37.0	6	 6.4	 6.4							INDONESIA		INDONESIA:  LOMBOK ISLAND	  -8.274	  116.491	60	      17	1			       355	3		3	5448	4		3	      17	1			355	3		3	5448	4		3
-10351	Tsu	2018	8	5	11	46	 37.0	31	 6.9	 6.9							INDONESIA		INDONESIA:  LOMBOK ISLAND	  -8.287	  116.452	60	     259	3			      1477	4		4		3	42239	4	     259	3			1477	3		4		3	42239	4
+10351	Tsu	2018	8	5	11	46	 37.0	31	 6.9	 6.9							INDONESIA		INDONESIA:  LOMBOK ISLAND	  -8.287	  116.452	60	     560	3			      7733	4	     509.000	4		3	83392	4	     560	3			7733	4	     509.000	4		3	83392	4
+10352		2018	8	9	5	25	 31.0	10	 5.9	 5.9							INDONESIA		INDONESIA:  LOMBOK ISLAND	  -8.394	  116.208	60	       2	1			        24	1		2				3	       2	1			24	1		2				3
+10353		2018	8	12	17	44	 26.0	10	 5.0			 5.0					CHINA		CHINA:   YUNNAN PROVINCE:  YUXI	  24.322	  102.941	30					        24	1		2			6000	4					24	1		2			6000	4
+10356	Tsu	2018	8	19	0	19	 37.0	563	 8.2	 8.2							FIJI		FIJI ISLANDS	 -18.178	 -178.111	170																								
+10354		2018	8	19	4	10	 21.0	8	 6.3	 6.3							INDONESIA		INDONESIA:  LOMBOK ISLAND	  -8.325	  116.577	60	       2	1			         1	1		2			1705	4	       2	1			1	1		2			1705	4
+10355		2018	8	19	14	56	 28.0	26	 6.9	 6.9							INDONESIA		INDONESIA:  LOMBOK ISLAND	  -8.324	  116.626	60	      10	1			        24	1		2			151	3	      10	1			24	1		2			151	3
+10357	Tsu	2018	8	21	21	31	 46.0	154	 7.3	 7.3							VENEZUELA		VENEZUELA:  SUCRE; TRINIDAD	  10.855	  -62.883	90	       5	1						2				3	       5	1						2				3
+10358		2018	8	25	22	13	 26.0	10	 6.0	 6.0							IRAN		IRAN:  KERMANSHAH	  34.663	   46.277	140	       2	1			       267	3		3			2600	4	       2	1			267	3		3			2600	4
+10359	Tsu	2018	8	29	3	51	 56.0	28	 7.1	 7.1							NEW CALEDONIA		NEW CALEDONIA:  LOYALTY ISLANDS	 -22.066	  170.050	170																								
+10360		2018	9	5	18	7	 58.0	33	 6.6	 6.6							JAPAN		JAPAN:  HOKKAIDO	  42.671	  141.933	30	      44	1			       660	3	     350.000	4		1		1	      44	1			660	3	     350.000	4		1		1
+10361		2018	9	6	15	49	 14.0	609	 7.8	 7.8							FIJI		FIJI ISLANDS	 -18.494	  179.332	170																								
+10362		2018	9	7	6	23	 38.0	10	 5.5			 5.5					IRAN		IRAN:  KERMAN	  28.342	   59.315	140	       1	1			         2	1		1				1	       1	1			2	1		1				1
+10368		2018	9	8	2	31	 31.0	10	 5.6	 5.6							CHINA		CHINA: YUNNAN PROVINCE:  MOJIANG HANI	  23.332	  101.552	30					        28	1		3			29000	4					28	1		3			29000	4
+10367		2018	9	12	4	50	 46.0	10	 5.3	 5.3							INDIA		INDIA:  WEST BENGAL	  26.374	   90.165	60	       1	1											       1	1										
+10369	Tsu	2018	9	28	10	2	 43.0	10	 7.5	 7.5						8	INDONESIA		INDONESIA:  SULAWESI	   -.178	  119.840	170	    2256	4	1309	4	      4612	4	     912.000	4	5864	4	69483	4	    2256	4	1309	4	4612	4	     912.000	4	5864	4	69483	4
+10370		2018	10	7	0	11	 49.0	12	 5.9	 5.9							HAITI		HAITI: PORT-DEX-PAIX	  20.041	  -72.975	90	      18	1			       580	3		2		3	11497	4	      18	1			580	3		2		3	11497	4
+10371		2018	10	10	18	44	 55.0	9	 6.0	 6.0						5	INDONESIA		INDONESIA:  MADURA ISLAND, JAVA	  -7.456	  114.453	60	       4	1			        36	1		1			433	3	       4	1			36	1		1			433	3
+10372	Tsu	2018	10	25	22	54	 51.0	14	 6.8	 6.8							GREECE		GREECE:  IONIAN SEA:  ZAKYNTHOS, STROFADES	  37.506	   20.563	130					         3	1		1									3	1		1				
+10374		2018	11	14	23	1	 21.0	9	 5.6	 5.6							INDONESIA		INDONESIA:  SULAWESI:  MAMASA	  -2.916	  119.435	170	       7	1						2				3	       7	1						2				3
+10375		2018	11	25	16	37	 31.0	10	 6.3	 6.3							IRAN		IRAN: KERMANSHAH; IRAQ: KURDISTAN	  34.304	   45.740	140	       1	1			       759	3		1				1	       1	1			759	3		1				1
+10377		2018	11	28	14	44	 25.0	22	 4.9	 4.9							AFGHANISTAN		AFGHANISTAN:  HINDU KUSH:  BAGHLAN	  35.817	   68.682	40					         9	1		1			60	2					9	1		1			60	2
+10376		2018	11	30	17	29	 28.0	41	 7.0	 7.0							USA	AK	ALASKA:  ANCHORAGE	  61.340	 -149.937	150					       117	3	      76.000	4	2	1		3					117	3	      76.000	4	2	1		3
+10378	Tsu	2018	12	5	4	18	  8.0	10	 7.5	 7.5							NEW CALEDONIA		NEW CALEDONIA:  LOYALTY ISLANDS	 -21.969	  169.446	170																				1				1
+10382		2018	12	15	20	21	 57.0	35	 5.6	 5.6							VANUATU		VANUATU ISLANDS: AMBRYM ISLAND	 -16.368	  168.213	170								2				1								2				1
+10381		2018	12	16	4	46	 11.0	27	 5.4	 5.4							CHINA		CHINA:  SICHUAN:  YIBIN	  28.264	  104.991	30					        17	1	       7.255	3	15	1	6145	4					17	1	       7.255	3	15	1	6145	4
+10384		2018	12	22	5	37	 37.0	8	 5.5	 5.5							MOZAMBIQUE		MOZAMBIQUE	 -20.644	   32.801	10					        10	1		2	600	3							10	1		2	600	3		
+10383		2018	12	26	2	19	 16.0	10	 5.1			 5.1					ITALY		ITALY:  SICILY:  CATANIA	  37.555	   15.166	130					        28	1	     114.000	4	15	1		1					28	1	     114.000	4	15	1		1
+10385		2019	1	3	0	48	  8.0	10	 5.2			 5.2					CHINA		CHINA:  SICHUAN:  YIBIN	  28.261	  104.984	30					       774	3		2			691	3					774	3		2			691	3
+10389		2019	1	6	13	41	 59.0	14	 5.6	 5.6							IRAN		IRAN:  KERMANSHAH: SARPOL-E ZAHAB	  34.121	   45.681	140					        75	2		1				1					75	2		1				1
+10387		2019	1	12	8	58	 27.0	2	 3.8				3.8				POLAND		POLAND:  RUDNA	  51.520	   16.090	120	       1	1			         6	1		2					       1	1			6	1		2				
+10388		2019	1	20	1	32	 51.0	53	 6.7	 6.7							CHILE		CHILE:  COQUIMBO, LA SERENA	 -30.074	  -71.423	160	       2	1						2			260	3	       2	1						2			260	3
